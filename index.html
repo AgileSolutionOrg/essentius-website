@@ -1,24 +1,480 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Essentius</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: system-ui, -apple-system, sans-serif;
-      background: #0f172a;
-      color: #f1f5f9;
-    }
-    h1 { font-size: 3rem; font-weight: 600; }
-  </style>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Essentius | Inteligência Essencial para Diabetes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#5d00c2",
+                    "surface": "#faf8ff",
+                    "tertiary-fixed": "#74f5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#bfc7d5",
+                    "on-surface-variant": "#3f4753",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#d2e4ff",
+                    "tertiary-fixed-dim": "#00dbe7",
+                    "surface-dim": "#d3d9f1",
+                    "surface-bright": "#faf8ff",
+                    "background": "#faf8ff",
+                    "on-primary-fixed-variant": "#00497e",
+                    "secondary-fixed": "#ebdcff",
+                    "surface-container-low": "#f2f3ff",
+                    "outline": "#707884",
+                    "inverse-primary": "#9fcaff",
+                    "primary-container": "#0099ff",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#00a5ae",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "surface-tint": "#0061a5",
+                    "on-primary-container": "#002f54",
+                    "secondary": "#731be5",
+                    "surface-container": "#e9edff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#001d36",
+                    "inverse-on-surface": "#edf0ff",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#d4bbff",
+                    "surface-variant": "#dbe2f9",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#fdf6ff",
+                    "on-surface": "#141b2c",
+                    "surface-container-highest": "#dbe2f9",
+                    "on-tertiary-fixed": "#002022",
+                    "secondary-container": "#8d42ff",
+                    "primary": "#0061a5",
+                    "primary-fixed-dim": "#9fcaff",
+                    "inverse-surface": "#293042",
+                    "on-background": "#141b2c",
+                    "tertiary": "#00696f",
+                    "on-secondary-fixed": "#270058",
+                    "on-tertiary-container": "#003337",
+                    "surface-container-high": "#e1e8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "16px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "margin-desktop": "48px",
+                    "stack-lg": "32px",
+                    "unit": "8px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Manrope"],
+                    "label-sm": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-header {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #0061a5 0%, #731be5 100%);
+        }
+        .card-shadow {
+            box-shadow: 0px 4px 20px rgba(26, 33, 50, 0.05);
+        }
+        .accent-bar {
+            width: 3px;
+            background: linear-gradient(to bottom, #0061a5, #731be5);
+        }
+        .shield-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 97, 165, 0.05);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #faf8ff;
+            color: #141b2c;
+        }
+        
+        /* Custom Animations */
+        @keyframes fadeSlideUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-slide-up {
+            animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .glass-shimmer {
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+        }
+        .glass-shimmer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite linear;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
-<body>
-  <h1>Hello, World! 👋</h1>
-</body>
-</html>
+<body class="overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-center items-center px-margin-mobile md:px-margin-desktop py-4 glass-header shadow-sm transition-all duration-300 hover:shadow-md">
+<div class="max-w-container-max w-full flex justify-between items-center">
+<div class="flex items-center gap-2">
+<img alt="Essentius Logo" class="h-10" src="assets/img0.jpg"/>
+<span class="font-headline-md text-headline-md font-extrabold text-primary">Essentius</span>
+</div>
+<a class="hidden md:block bg-primary hover:opacity-90 text-on-primary px-6 py-2 rounded-lg font-bold transition-all hover:-translate-y-0.5 hover:shadow-lg active:scale-95" href="#cta">
+                Começar Agora
+            </a>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="hero-section px-margin-mobile md:px-margin-desktop py-stack-lg md:py-24 max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-2 items-center gap-gutter">
+<div class="flex flex-col gap-stack-md">
+<span class="text-secondary font-label-sm tracking-widest uppercase animate-fade-slide-up">Inteligência Artificial em Saúde</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight animate-fade-slide-up delay-100">
+                        ESSENTIUS: A Inteligência <span class="text-primary">Essencial</span> para Quem Vive com Diabetes
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg animate-fade-slide-up delay-200">
+                        Transformando dados em compreensão, todos os dias. O suporte que você precisa para gerenciar sua saúde com precisão clínica e tranquilidade.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4 animate-fade-slide-up delay-300" id="cta">
+<button class="primary-gradient text-on-primary font-bold px-8 py-4 rounded-lg text-body-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 active:scale-95">
+                            Conhecer o Ecossistema
+                        </button>
+<button class="border-2 border-primary text-primary font-bold px-8 py-4 rounded-lg text-body-lg hover:bg-primary-container/10 transition-all hover:-translate-y-1">
+                            Ver Demonstração
+                        </button>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="absolute w-full h-full primary-gradient opacity-10 rounded-full blur-3xl -z-10"></div>
+<div class="animate-float">
+<img class="w-full max-w-md drop-shadow-2xl" data-alt="A futuristic medical technology hub illustration featuring the Essentius shield logo at the center, surrounded by glowing orbital lines and data nodes in cyan, violet, and deep blue colors. The background is a clean white clinic environment with soft volumetric lighting, conveying a sense of high-tech medical security and advanced clinical confidence." src="assets/img0.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Sobre Section (Bento Style) -->
+<section class="scroll-animate bg-surface-container-low py-24 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">O que é o Essentius</h2>
+<div class="h-1 w-24 primary-gradient mx-auto mt-4 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 bg-surface-container-lowest p-stack-lg rounded-xl card-shadow flex flex-col md:flex-row gap-gutter items-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-primary/20 border border-transparent">
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Um Ecossistema Integrado</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                O Essentius não é apenas um aplicativo, mas um ecossistema de Inteligência Artificial altamente especializado. Ele atua como um elo entre o usuário e a complexidade do tratamento, simplificando a jornada diária com diabetes através de múltiplos agentes inteligentes que conversam entre si.
+                            </p>
+</div>
+<div class="w-full md:w-1/3 bg-primary-container/10 rounded-xl p-4 flex justify-center">
+<span class="material-symbols-outlined text-primary text-7xl" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-primary text-on-primary p-stack-lg rounded-xl flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div>
+<span class="material-symbols-outlined text-4xl mb-4">security</span>
+<h3 class="font-headline-md text-headline-md mb-2">Sua Saúde, Seus Dados</h3>
+<p class="font-body-md text-body-md opacity-90">Privacidade de nível hospitalar e segurança criptografada para proteger o que é mais importante.</p>
+</div>
+<div class="mt-8 font-bold text-headline-md">99.9% Clinical Confidence</div>
+</div>
+</div>
+</div>
+</section>
+<!-- O Agente Essentius Section (Personas) -->
+<section class="scroll-animate py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">As Personas do Essentius</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Diferentes perspectivas para um cuidado completo.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Educador -->
+<div class="bg-surface-container-lowest p-8 rounded-xl card-shadow border border-outline-variant/20 hover:border-primary/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex gap-4">
+<div class="accent-bar rounded-full"></div>
+<div>
+<div class="shield-icon mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Educador</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Traduz os conceitos científicos em dicas práticas e fáceis de aplicar no dia a dia.</p>
+</div>
+</div>
+<!-- Analista -->
+<div class="bg-surface-container-lowest p-8 rounded-xl card-shadow border border-outline-variant/20 hover:border-primary/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex gap-4">
+<div class="accent-bar rounded-full"></div>
+<div>
+<div class="shield-icon mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary">monitoring</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Analista</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Observa padrões silenciosos nos seus dados que passariam despercebidos pelo olho humano.</p>
+</div>
+</div>
+<!-- Tradutor Médico -->
+<div class="bg-surface-container-lowest p-8 rounded-xl card-shadow border border-outline-variant/20 hover:border-primary/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex gap-4">
+<div class="accent-bar rounded-full"></div>
+<div>
+<div class="shield-icon mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary">translate</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Tradutor Médico</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Decifra termos técnicos de exames para que você entenda o que está acontecendo com seu corpo.</p>
+</div>
+</div>
+<!-- Assistente Nutricional -->
+<div class="bg-surface-container-lowest p-8 rounded-xl card-shadow border border-outline-variant/20 hover:border-primary/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex gap-4">
+<div class="accent-bar rounded-full"></div>
+<div>
+<div class="shield-icon mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary">restaurant</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Assistente Nutricional</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Analisa suas refeições e sugere ajustes focados no controle glicêmico.</p>
+</div>
+</div>
+<!-- Monitor de Tendências -->
+<div class="bg-surface-container-lowest p-8 rounded-xl card-shadow border border-outline-variant/20 hover:border-primary/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex gap-4">
+<div class="accent-bar rounded-full"></div>
+<div>
+<div class="shield-icon mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Monitor de Tendências</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Prevê possíveis variações glicêmicas antes mesmo que elas ocorram.</p>
+</div>
+</div>
+<!-- Companheiro Diário -->
+<div class="bg-surface-container-lowest p-8 rounded-xl card-shadow border border-outline-variant/20 hover:border-primary/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex gap-4">
+<div class="accent-bar rounded-full"></div>
+<div>
+<div class="shield-icon mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Companheiro Diário</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Está ao seu lado 24/7 para suporte emocional e lembretes de rotina.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Funcionalidades Section (Modern Cards) -->
+<section class="scroll-animate bg-surface py-24 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Funcionalidades Inteligentes</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Tecnologia de ponta a serviço da sua saúde.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="group overflow-hidden rounded-xl bg-surface-container-lowest card-shadow hover:-translate-y-2 hover:shadow-xl border border-transparent hover:border-primary/20 transition-all duration-300">
+<div class="h-48 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-110 transition-transform duration-700" data-alt="A close-up high-resolution photograph of a healthy Mediterranean salad plate being analyzed by a digital interface overlay. The lighting is bright and natural, showing vibrant vegetables and grains. Minimalist UI elements like nutrition labels and carbohydrate estimates float above the food in a clean healthcare tech aesthetic." style="background-image: url('assets/img1.png')"></div>
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold shadow-md">AI VISION</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Foto do Prato</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Reconhecimento instantâneo de macronutrientes através da câmera.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group overflow-hidden rounded-xl bg-surface-container-lowest card-shadow hover:-translate-y-2 hover:shadow-xl border border-transparent hover:border-secondary/20 transition-all duration-300">
+<div class="h-48 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-110 transition-transform duration-700" data-alt="A macro shot of a sleek continuous glucose monitor sensor on a person's arm, integrated with a glowing blue digital signal line that flows into a smartphone screen. The image features soft clinical lighting with a professional medical technology palette of white and deep blue, emphasizing connectivity and seamless health tracking." style="background-image: url('assets/img2.png')"></div>
+<div class="absolute top-4 right-4 bg-secondary text-on-primary px-3 py-1 rounded-full text-xs font-bold shadow-md">INTEGRADO</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Integração com Sensores</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Conexão direta com CGMs e bombas de insulina para monitoramento em tempo real.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group overflow-hidden rounded-xl bg-surface-container-lowest card-shadow hover:-translate-y-2 hover:shadow-xl border border-transparent hover:border-tertiary-container/30 transition-all duration-300">
+<div class="h-48 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-110 transition-transform duration-700" data-alt="A clean, minimalist desk with a medical lab report being scanned by a smartphone. The interface shows key data points like HbA1c and glucose levels being highlighted and translated into easy-to-read charts. The scene is bright, organized, and professional, using a clinical modern color scheme with soft purple and teal accents." style="background-image: url('assets/img3.png')"></div>
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold shadow-md">SMART OCR</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Leitura de Exames</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Transforme fotos de exames laboratoriais em dados estruturados e compreensíveis.</p>
+</div>
+</div>
+</div>
+<!-- More Features Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mt-gutter">
+<div class="flex items-start gap-4 p-6 bg-surface-container rounded-xl hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">edit_note</span>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface text-lg">Registro Manual</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Interface fluida para anotar exercícios, humor e medicação em segundos.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-6 bg-surface-container rounded-xl hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">insights</span>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface text-lg">Análise de Tendências</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Relatórios inteligentes que revelam o que o seu corpo está tentando dizer.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-6 bg-surface-container rounded-xl hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">psychiatry</span>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface text-lg">Dúvidas de Saúde</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Tira-dúvidas inteligente baseado em literatura médica atualizada.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ciência e Segurança Section -->
+<section class="scroll-animate py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-surface-dim rounded-3xl p-stack-lg md:p-24 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-64 h-64 primary-gradient opacity-5 rounded-full -mr-32 -mt-32"></div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Ciência e Segurança em Primeiro Lugar</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            Nossa tecnologia é treinada exclusivamente com base nas diretrizes das maiores autoridades mundiais em saúde. No Essentius, a inovação nunca ignora a evidência clínica.
+                        </p>
+<div class="flex flex-wrap gap-4 items-center">
+<span class="bg-surface-container-highest px-4 py-2 rounded-lg font-bold text-on-surface border border-outline hover:bg-surface-container-high transition-colors cursor-default">ADA</span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-lg font-bold text-on-surface border border-outline hover:bg-surface-container-high transition-colors cursor-default">SBD</span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-lg font-bold text-on-surface border border-outline hover:bg-surface-container-high transition-colors cursor-default">OMS</span>
+</div>
+</div>
+<div class="bg-error-container/30 border border-error/20 p-8 rounded-2xl glass-shimmer">
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-4 text-error">
+<span class="material-symbols-outlined">warning</span>
+<h4 class="font-bold">Aviso Importante</h4>
+</div>
+<p class="font-body-md text-body-md text-on-error-container">
+                            O Essentius é uma ferramenta de suporte e educação. Ele <strong>não substitui</strong> o aconselhamento, diagnóstico ou tratamento de um profissional de saúde qualificado. Sempre consulte seu endocrinologista antes de realizar qualquer alteração na sua rotina de tratamento ou medicação.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest w-full px-margin-mobile md:px-margin-desktop py-stack-lg border-t border-outline-variant/30 mt-24">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex items-center gap-2 hover:scale-105 transition-transform duration-300 cursor-pointer">
+<img alt="Essentius Logo" class="h-8" src="assets/img0.jpg"/>
+<span class="font-headline-md text-headline-md font-extrabold text-primary">Essentius</span>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-body-md text-body-md text-on-surface-variant">
+<a class="nav-link text-primary" href="#">Sobre Nós</a>
+<a class="nav-link text-primary" href="#">Privacidade</a>
+<a class="nav-link text-primary" href="#">Termos de Uso</a>
+<a class="nav-link text-primary" href="#">Contato</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-70">
+                © 2024 Essentius AI. Todos os direitos reservados.
+            </p>
+</div>
+</footer>
+<script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-12');
+                    // Optional: unobserve after animating to keep it visible
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section.scroll-animate').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-12', 'ease-out');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
