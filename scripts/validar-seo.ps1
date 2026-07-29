@@ -8,7 +8,9 @@ function Ok($msg) { "  OK    $msg" }
 $paginas = @(
     @{ arq = "$w\index.html";                              url = "https://essentius.com.br/" },
     @{ arq = "$w\app-para-controlar-diabetes\index.html";  url = "https://essentius.com.br/app-para-controlar-diabetes/" },
-    @{ arq = "$w\perguntas-frequentes\index.html";         url = "https://essentius.com.br/perguntas-frequentes/" }
+    @{ arq = "$w\perguntas-frequentes\index.html";         url = "https://essentius.com.br/perguntas-frequentes/" },
+    @{ arq = "$w\politica-de-privacidade\index.html";      url = "https://essentius.com.br/politica-de-privacidade/" },
+    @{ arq = "$w\termos-de-uso\index.html";                url = "https://essentius.com.br/termos-de-uso/" }
 )
 
 foreach ($p in $paginas) {
@@ -75,6 +77,7 @@ if (Test-Path "$w\sitemap.xml") {
 } else { Falhou "sitemap.xml ausente" }
 
 "`n== links internos =="
+$falhasAntesDosLinks = $falhas
 foreach ($p in $paginas) {
     if (-not (Test-Path $p.arq)) { continue }
     $html = [System.Text.Encoding]::UTF8.GetString([System.IO.File]::ReadAllBytes($p.arq))
@@ -84,7 +87,7 @@ foreach ($p in $paginas) {
         if (-not (Test-Path $alvo)) { Falhou "$(Split-Path (Split-Path $p.arq -Parent) -Leaf): link quebrado -> $href" }
     }
 }
-if ($falhas -eq 0) { Ok "nenhum link interno quebrado" }
+if ($falhas -eq $falhasAntesDosLinks) { Ok "nenhum link interno quebrado" }
 
 ""
 if ($falhas -eq 0) { "RESULTADO: SEO tecnico OK." } else { "RESULTADO: $falhas problema(s)."; exit 1 }
