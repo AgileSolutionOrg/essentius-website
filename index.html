@@ -181,65 +181,153 @@
   .hero-nota{margin-top:28px;font-size:.87rem;color:var(--apagado)}
   .hero-nota b{color:#C7D3EE;font-weight:700}
 
-  /* ---------- mockup do celular ---------- */
-  .palco{position:relative;display:grid;place-items:center;min-height:560px}
-  .halo{position:absolute;width:400px;height:400px;border-radius:50%;
-        background:radial-gradient(circle,rgba(59,130,246,.30),transparent 68%);filter:blur(28px)}
-  .fone{position:relative;z-index:2;width:296px;border-radius:42px;padding:11px;
-        background:linear-gradient(160deg,#243154,#0D1428 60%);
-        border:1px solid rgba(255,255,255,.16);
-        box-shadow:0 42px 90px rgba(0,0,0,.62),0 0 0 1px rgba(255,255,255,.05) inset;
-        animation:boiar 7s ease-in-out infinite}
-  @keyframes boiar{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-  .tela{border-radius:33px;background:linear-gradient(175deg,#0B1226,#111C3D);
-        padding:14px 15px 12px;overflow:hidden;position:relative}
-  .barra-status{display:flex;justify-content:space-between;font-size:.63rem;color:#8FA0C4;
-                font-weight:700;margin-bottom:12px}
-  .app-topo{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-  .app-marca{display:flex;align-items:center;gap:7px;font-weight:800;font-size:.86rem}
-  .app-saud{font-size:.95rem;font-weight:800;margin-bottom:2px}
-  .app-sub{font-size:.68rem;color:#8FA0C4;margin-bottom:13px}
-  .cartao-glic{background:linear-gradient(150deg,rgba(59,130,246,.20),rgba(139,92,246,.14));
-               border:1px solid rgba(255,255,255,.12);border-radius:17px;padding:13px 14px}
-  .glic-rot{font-size:.63rem;color:#A9B6D6;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-  .glic-val{display:flex;align-items:baseline;gap:5px;margin:2px 0 1px}
-  .glic-num{font-size:2.05rem;font-weight:800;letter-spacing:-.03em;line-height:1}
-  .glic-un{font-size:.7rem;color:#8FD9F0;font-weight:700}
-  .glic-tend{font-size:.63rem;color:#7CE0B0;font-weight:700;margin-bottom:8px}
-  .grafico{width:100%;height:54px;display:block}
-  .linha-graf{fill:none;stroke:url(#gradLinha);stroke-width:2.4;stroke-linecap:round;
-              stroke-linejoin:round;stroke-dasharray:420;stroke-dashoffset:420;
-              animation:desenhar 2.6s .4s ease-out forwards}
-  @keyframes desenhar{to{stroke-dashoffset:0}}
-  .fichas{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:11px}
-  .ficha{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
-         border-radius:11px;padding:8px 7px;text-align:center}
-  .ficha b{display:block;font-size:.86rem;font-weight:800}
-  .ficha span{font-size:.55rem;color:#8FA0C4;font-weight:600;letter-spacing:.02em}
-  .cartao-essi{display:flex;align-items:center;gap:9px;margin-top:11px;
-               background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
-               border-radius:13px;padding:9px 11px}
-  .essi-bolha{width:32px;height:32px;border-radius:50%;flex:none;display:grid;place-items:center;
-              font-size:1rem;background:linear-gradient(140deg,#22D3EE,#8B5CF6);
-              box-shadow:0 0 16px rgba(96,165,250,.55)}
-  .essi-txt b{display:block;font-size:.7rem;font-weight:800}
-  .essi-txt span{font-size:.6rem;color:#8FA0C4}
-  .app-nav{display:flex;justify-content:space-between;align-items:center;margin-top:13px;
-           padding-top:9px;border-top:1px solid rgba(255,255,255,.08);
-           font-size:.52rem;color:#7A88AC;font-weight:700}
-  .app-nav i{font-style:normal;display:block;text-align:center;font-size:.8rem;margin-bottom:1px}
-  .app-nav .mais{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
-                 background:linear-gradient(140deg,#3B82F6,#8B5CF6);color:#fff;font-size:1rem;
-                 box-shadow:0 6px 18px rgba(59,130,246,.5)}
+  /* ---------- palco: dois aparelhos em perspectiva ---------- */
+  .palco{position:relative;min-height:700px;display:flex;align-items:center;
+         justify-content:flex-end;perspective:1600px}
+  @media(max-width:980px){.palco{justify-content:center;min-height:660px}}
+  .halo{position:absolute;left:52%;top:50%;transform:translate(-50%,-50%);pointer-events:none;
+        width:560px;height:560px;border-radius:50%;filter:blur(34px);
+        background:radial-gradient(circle,rgba(59,130,246,.32),rgba(139,92,246,.15) 46%,transparent 71%)}
 
-  .balao{position:absolute;z-index:3;background:rgba(13,21,46,.92);border:1px solid var(--linha-forte);
-         backdrop-filter:blur(12px);border-radius:14px;padding:11px 15px;white-space:nowrap;
-         box-shadow:0 18px 44px rgba(0,0,0,.55);animation:boiar 8s ease-in-out infinite}
-  .balao b{display:block;font-size:.82rem;font-weight:800}
-  .balao span{font-size:.68rem;color:var(--apagado);font-weight:600}
-  .balao-1{top:1%;left:-5%;animation-delay:-2s}
-  .balao-2{bottom:2%;right:-5%;animation-delay:-4.5s}
-  @media(max-width:560px){.balao{display:none}}
+  .aparelho{animation:boiar 7.5s ease-in-out infinite}
+  @keyframes boiar{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+  .aparelho-frente{position:relative;z-index:3}
+  .aparelho-tras{position:absolute;left:-2%;top:74px;z-index:1;animation-delay:-3.4s}
+  @media(max-width:1140px){.aparelho-tras{display:none}}
+
+  .fone{position:relative;border-radius:46px;padding:9px;
+        background:linear-gradient(148deg,#6B78A4 0%,#2B3454 16%,#161D35 54%,#090F1E 100%);
+        box-shadow:0 54px 104px rgba(0,0,0,.72),0 10px 30px rgba(0,0,0,.55),
+                   0 0 0 1px rgba(255,255,255,.11) inset}
+  .fone-g{width:300px;transform:rotateY(-10deg) rotateX(3deg)}
+  .fone-p{width:250px;transform:rotateY(14deg) rotateX(2deg)}
+  .fone::before,.fone::after{content:"";position:absolute;border-radius:4px;
+        background:linear-gradient(180deg,#5A6790,#242C48)}
+  .fone::before{left:-2.5px;top:108px;width:3px;height:32px;box-shadow:0 42px 0 #4A5578}
+  .fone::after{right:-2.5px;top:150px;width:3px;height:66px}
+
+  .tela{position:relative;border-radius:38px;overflow:hidden;padding:11px 14px 10px;
+        background:linear-gradient(178deg,#080E20,#0F1836 55%,#151F45)}
+  .tela::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+        background:linear-gradient(122deg,rgba(255,255,255,.10),rgba(255,255,255,0) 34%,
+                                   rgba(255,255,255,0) 72%,rgba(255,255,255,.05))}
+  .ilha{position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:5;
+        width:82px;height:24px;border-radius:99px;background:#04060E;
+        box-shadow:0 0 0 1px rgba(255,255,255,.06)}
+  .ilha::after{content:"";position:absolute;right:8px;top:50%;transform:translateY(-50%);
+        width:8px;height:8px;border-radius:50%;
+        background:radial-gradient(circle at 34% 32%,#24456F,#060A16 68%);
+        box-shadow:0 0 0 1px rgba(120,180,255,.18)}
+  .fone-p .ilha{width:68px;height:21px;top:9px}
+
+  .status{position:relative;z-index:6;display:flex;justify-content:space-between;align-items:center;
+          height:25px;padding:0 5px;font-size:.63rem;font-weight:700;color:#E2E9FA;letter-spacing:.01em}
+  .status div{display:flex;align-items:center;gap:5px}
+  .status svg{display:block}
+
+  /* ---- painel do dia ---- */
+  .app-topo{display:flex;align-items:center;justify-content:space-between;margin:9px 0 12px}
+  .app-marca{display:flex;align-items:center;gap:7px;font-weight:800;font-size:.82rem;letter-spacing:-.01em}
+  .app-sino{position:relative;color:#8FA0C4;display:block}
+  .app-sino::after{content:"";position:absolute;top:-1px;right:-1px;width:6px;height:6px;border-radius:50%;
+                   background:#F87171;box-shadow:0 0 0 2px #101838}
+  .app-saud{font-size:.97rem;font-weight:800;letter-spacing:-.015em}
+  .app-sub{font-size:.66rem;color:#8FA0C4;margin:1px 0 12px}
+
+  .cartao-glic{position:relative;border-radius:19px;padding:12px 14px 7px;
+               background:linear-gradient(155deg,rgba(59,130,246,.28),rgba(139,92,246,.17) 58%,rgba(34,211,238,.10));
+               box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 12px 28px rgba(0,0,0,.32)}
+  .glic-topo{display:flex;justify-content:space-between;align-items:flex-start}
+  .glic-rot{font-size:.59rem;color:#BCC9E6;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+  .glic-selo{font-size:.54rem;font-weight:800;letter-spacing:.04em;padding:3px 8px;border-radius:99px;
+             background:rgba(52,211,153,.18);color:#6EE7B7;
+             box-shadow:0 0 0 1px rgba(52,211,153,.32) inset;white-space:nowrap}
+  .glic-val{display:flex;align-items:baseline;gap:6px;margin:4px 0 1px}
+  .glic-num{font-size:2.3rem;font-weight:800;letter-spacing:-.038em;line-height:1;
+            text-shadow:0 0 28px rgba(147,197,253,.5)}
+  .glic-un{font-size:.67rem;color:#9FE4F5;font-weight:700}
+  .glic-tend{font-size:.61rem;color:#7CE0B0;font-weight:700}
+  .grafico{width:100%;height:60px;display:block;margin-top:5px;overflow:visible}
+  .area-graf{fill:url(#gradArea);opacity:0;animation:aparecer 1.2s 1.4s ease-out forwards}
+  @keyframes aparecer{to{opacity:1}}
+  .linha-graf{fill:none;stroke:url(#gradLinha);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;
+              stroke-dasharray:300;stroke-dashoffset:300;animation:desenhar 2.1s .3s ease-out forwards;
+              filter:drop-shadow(0 2px 9px rgba(96,165,250,.6))}
+  @keyframes desenhar{to{stroke-dashoffset:0}}
+  .ponta{fill:#fff;opacity:0;animation:aparecer .5s 2.1s ease-out forwards}
+  .ponta-halo{fill:#93C5FD;opacity:0;animation:aparecer .5s 2.1s ease-out forwards,
+                                              latejar 2.6s 2.6s ease-out infinite}
+  @keyframes latejar{0%,100%{opacity:.42}50%{opacity:.10}}
+
+  .aneis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:11px}
+  .anel-cx{border-radius:15px;padding:9px 3px 8px;text-align:center;
+           background:rgba(255,255,255,.045);box-shadow:0 0 0 1px rgba(255,255,255,.07) inset}
+  .anel-cx svg{margin:0 auto 5px;display:block}
+  .anel-tr{fill:none;stroke:rgba(255,255,255,.11);stroke-width:5}
+  .anel-pr{fill:none;stroke-width:5;stroke-linecap:round;stroke-dasharray:100 100;
+           stroke-dashoffset:var(--fim,0);transform:rotate(-90deg);transform-origin:50% 50%;
+           animation:preencher 1.5s .7s cubic-bezier(.4,0,.2,1) backwards}
+  @keyframes preencher{from{stroke-dashoffset:100}}
+  .anel-cx b{display:block;font-size:.58rem;font-weight:800;letter-spacing:.01em}
+  .anel-cx span{font-size:.5rem;color:#8FA0C4;font-weight:700}
+
+  .cartao-essi{display:flex;align-items:center;gap:10px;margin-top:10px;padding:9px 11px;
+               border-radius:16px;
+               background:linear-gradient(118deg,rgba(139,92,246,.22),rgba(34,211,238,.12));
+               box-shadow:0 0 0 1px rgba(255,255,255,.10) inset}
+  .essi-orb{position:relative;width:34px;height:34px;flex:none;border-radius:50%;
+            background:radial-gradient(circle at 34% 28%,#CFFAFE,#38BDF8 40%,#7C3AED 100%);
+            box-shadow:0 0 20px rgba(96,165,250,.75),0 0 0 2px rgba(255,255,255,.14) inset;
+            animation:respirar 3.2s ease-in-out infinite}
+  @keyframes respirar{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+  .essi-txt{flex:1;min-width:0}
+  .essi-txt b{display:block;font-size:.69rem;font-weight:800}
+  .essi-txt span{font-size:.57rem;color:#9DAAC9;font-weight:600}
+  .essi-xp{height:4px;border-radius:99px;background:rgba(255,255,255,.13);margin-top:5px;overflow:hidden}
+  .essi-xp i{display:block;height:100%;width:0;border-radius:99px;
+             background:linear-gradient(90deg,#22D3EE,#A78BFA);animation:encher 1.7s 1s ease-out forwards}
+  @keyframes encher{to{width:72%}}
+  .essi-coins{flex:none;font-size:.62rem;font-weight:800;color:#FCD34D;white-space:nowrap}
+
+  .app-nav{display:flex;justify-content:space-between;align-items:center;margin-top:12px;
+           padding-top:9px;border-top:1px solid rgba(255,255,255,.08)}
+  .app-nav span{display:flex;flex-direction:column;align-items:center;gap:3px;
+                font-size:.49rem;font-weight:700;color:#6F7D9F;letter-spacing:.02em}
+  .app-nav .ativo{color:#8FD9F0}
+  .app-nav .fab{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;
+                background:linear-gradient(140deg,#22D3EE,#3B82F6 46%,#8B5CF6);
+                box-shadow:0 8px 22px rgba(59,130,246,.62)}
+
+  /* ---- conversa com o agente (aparelho de tras) ---- */
+  .chat-topo{display:flex;align-items:center;gap:8px;margin:9px 0 13px}
+  .chat-nome b{display:block;font-size:.71rem;font-weight:800}
+  .chat-nome span{display:flex;align-items:center;gap:4px;font-size:.54rem;color:#6EE7B7;font-weight:700}
+  .msg{max-width:88%;padding:8px 11px;border-radius:15px;font-size:.61rem;line-height:1.52;margin-bottom:7px}
+  .msg-eu{margin-left:auto;color:#fff;border-bottom-right-radius:5px;
+          background:linear-gradient(118deg,#2563EB,#7C3AED)}
+  .msg-ia{color:#D7E0F4;border-bottom-left-radius:5px;background:rgba(255,255,255,.07);
+          box-shadow:0 0 0 1px rgba(255,255,255,.07) inset}
+  .msg-fonte{display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:3px 8px;
+             border-radius:99px;font-size:.49rem;font-weight:800;letter-spacing:.04em;
+             color:#8FD9F0;background:rgba(34,211,238,.13)}
+  .digitando{display:flex;gap:4px;width:-moz-fit-content;width:fit-content;padding:10px 12px;
+             border-radius:15px;border-bottom-left-radius:5px;background:rgba(255,255,255,.07)}
+  .digitando i{width:5px;height:5px;border-radius:50%;background:#93A2C4;animation:saltar 1.3s infinite}
+  .digitando i:nth-child(2){animation-delay:.16s}
+  .digitando i:nth-child(3){animation-delay:.32s}
+  @keyframes saltar{0%,62%,100%{opacity:.28;transform:translateY(0)}
+                    31%{opacity:1;transform:translateY(-3px)}}
+
+  .balao{position:absolute;z-index:4;padding:11px 15px;border-radius:16px;white-space:nowrap;
+         background:rgba(11,18,40,.82);backdrop-filter:blur(14px);
+         box-shadow:0 0 0 1px rgba(255,255,255,.14) inset,0 22px 48px rgba(0,0,0,.62);
+         animation:boiar 8.5s ease-in-out infinite}
+  .balao b{display:flex;align-items:center;gap:7px;font-size:.8rem;font-weight:800}
+  .balao span{display:block;font-size:.65rem;color:var(--apagado);font-weight:600;margin-top:1px}
+  .balao-1{top:18px;left:4%;animation-delay:-2s}
+  .balao-2{bottom:64px;left:2%;animation-delay:-5s}
+  @media(max-width:1140px){.balao-1{top:0;left:0}.balao-2{bottom:24px;left:0}}
+  @media(max-width:600px){.balao{display:none}}
 
   /* ---------- secoes ---------- */
   section{padding:96px 0;position:relative}
@@ -459,72 +547,148 @@
     <div class="palco">
       <div class="halo" aria-hidden="true"></div>
 
-      <div class="balao balao-1">
-        <b>🔥 27 dias</b><span>de cuidado seguido</span>
+      <!-- aparelho de tras: conversa com o agente de IA -->
+      <div class="aparelho aparelho-tras" aria-hidden="true">
+        <div class="fone fone-p">
+          <div class="tela">
+            <div class="ilha"></div>
+            <div class="status">
+              <span>9:41</span>
+              <div>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="currentColor"><rect y="7" width="2.8" height="3" rx=".9"/><rect x="4.4" y="4.8" width="2.8" height="5.2" rx=".9"/><rect x="8.8" y="2.4" width="2.8" height="7.6" rx=".9"/><rect x="13.2" width="2.8" height="10" rx=".9"/></svg>
+                <svg width="23" height="10" viewBox="0 0 23 10"><rect x=".5" y=".5" width="19" height="9" rx="2.8" fill="none" stroke="currentColor" stroke-opacity=".45"/><rect x="2" y="2" width="16" height="6" rx="1.6" fill="currentColor"/><path d="M21 3.4v3.2a1.8 1.8 0 0 0 0-3.2Z" fill="currentColor" fill-opacity=".45"/></svg>
+              </div>
+            </div>
+
+            <div class="chat-topo">
+              <div class="essi-orb" style="width:28px;height:28px"></div>
+              <div class="chat-nome">
+                <b>Essi</b>
+                <span><span class="ponto" style="width:5px;height:5px"></span> agente Essentius</span>
+              </div>
+            </div>
+
+            <div class="msg msg-eu">Comi pizza no jantar. Devo medir de quanto em quanto tempo?</div>
+            <div class="msg msg-ia">
+              Pizza tem bastante gordura, então a glicemia costuma subir mais devagar e ficar
+              alta por mais tempo. Vale uma medida 2h depois e outra por volta das 4h.
+              <span class="msg-fonte">ADA · SBD</span>
+            </div>
+            <div class="msg msg-eu">E se estiver alta na segunda?</div>
+            <div class="digitando"><i></i><i></i><i></i></div>
+          </div>
+        </div>
       </div>
 
-      <div class="fone" role="img" aria-label="Tela do aplicativo Essentius mostrando glicemia atual de 142 mg/dL, curva do dia, tempo no alvo de 65% e o companheiro Essi comemorando o registro">
-        <div class="tela">
-          <div class="barra-status"><span>9:41</span><span>▮▮▮ ⏶ 100%</span></div>
+      <div class="balao balao-1">
+        <b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s4 4.4 4 8a4 4 0 0 1-8 0c0-1 .3-1.8.6-2.5C7 9 6 11 6 13.5a6 6 0 0 0 12 0C18 8.6 12 2 12 2Z"/></svg> 27 dias</b>
+        <span>de cuidado seguido</span>
+      </div>
 
-          <div class="app-topo">
-            <div class="app-marca">
-              <img src="assets/marca.png" alt="" width="201" height="141" style="height:19px;width:auto"/>
-              <span>Essentius</span>
+      <!-- aparelho da frente: painel do dia -->
+      <div class="aparelho aparelho-frente">
+        <div class="fone fone-g" role="img" aria-label="Tela do aplicativo Essentius: glicemia atual de 142 mg/dL com a curva do dia, os três anéis de cuidado do dia e o companheiro Essi reagindo aos registros">
+          <div class="tela">
+            <div class="ilha"></div>
+            <div class="status">
+              <span>9:41</span>
+              <div>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="currentColor"><rect y="7" width="2.8" height="3" rx=".9"/><rect x="4.4" y="4.8" width="2.8" height="5.2" rx=".9"/><rect x="8.8" y="2.4" width="2.8" height="7.6" rx=".9"/><rect x="13.2" width="2.8" height="10" rx=".9"/></svg>
+                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 3.5a8.6 8.6 0 0 1 12 0"/><path d="M3.4 6a5.4 5.4 0 0 1 7.2 0"/><path d="M5.8 8.4a2.1 2.1 0 0 1 2.4 0"/></svg>
+                <svg width="23" height="10" viewBox="0 0 23 10"><rect x=".5" y=".5" width="19" height="9" rx="2.8" fill="none" stroke="currentColor" stroke-opacity=".45"/><rect x="2" y="2" width="16" height="6" rx="1.6" fill="currentColor"/><path d="M21 3.4v3.2a1.8 1.8 0 0 0 0-3.2Z" fill="currentColor" fill-opacity=".45"/></svg>
+              </div>
             </div>
-            <span style="font-size:.8rem">🔔</span>
-          </div>
 
-          <div class="app-saud">Olá, Gildo 👋</div>
-          <div class="app-sub">Vamos juntos cuidar da sua saúde hoje?</div>
-
-          <div class="cartao-glic">
-            <div class="glic-rot">Glicemia atual</div>
-            <div class="glic-val"><span class="glic-num">142</span><span class="glic-un">mg/dL</span></div>
-            <div class="glic-tend">↗ Tendência: estável</div>
-            <svg class="grafico" viewBox="0 0 240 54" preserveAspectRatio="none" aria-hidden="true">
-              <defs>
-                <linearGradient id="gradLinha" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#22D3EE"/>
-                  <stop offset="55%" stop-color="#60A5FA"/>
-                  <stop offset="100%" stop-color="#A78BFA"/>
-                </linearGradient>
-                <linearGradient id="gradFaixa" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="rgba(52,211,153,.16)"/>
-                  <stop offset="100%" stop-color="rgba(52,211,153,.04)"/>
-                </linearGradient>
-              </defs>
-              <rect x="0" y="17" width="240" height="22" fill="url(#gradFaixa)"/>
-              <path class="linha-graf" d="M2,40 L26,33 L50,37 L74,22 L98,28 L122,18 L146,26 L170,14 L194,24 L218,20 L238,27"/>
-            </svg>
-          </div>
-
-          <div class="fichas">
-            <div class="ficha"><b style="color:#6EE7B7">65%</b><span>NO ALVO</span></div>
-            <div class="ficha"><b style="color:#FCD34D">20%</b><span>ACIMA</span></div>
-            <div class="ficha"><b style="color:#93C5FD">126 g</b><span>CARBOS</span></div>
-          </div>
-
-          <div class="cartao-essi">
-            <div class="essi-bolha" aria-hidden="true">⚡</div>
-            <div class="essi-txt">
-              <b>Essi está animado!</b>
-              <span>Você registrou tudo hoje · +45 EssCoins</span>
+            <div class="app-topo">
+              <div class="app-marca">
+                <img src="assets/marca.png" alt="" width="201" height="141" style="height:19px;width:auto"/>
+                <span>Essentius</span>
+              </div>
+              <span class="app-sino"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
             </div>
-          </div>
 
-          <div class="app-nav">
-            <span><i>🏠</i>Início</span>
-            <span><i>📊</i>Relatórios</span>
-            <span class="mais" aria-hidden="true">+</span>
-            <span><i>💬</i>Ajuda</span>
-            <span><i>⋯</i>Mais</span>
+            <div class="app-saud">Olá, Gildo 👋</div>
+            <div class="app-sub">Vamos juntos cuidar da sua saúde hoje?</div>
+
+            <div class="cartao-glic">
+              <div class="glic-topo">
+                <span class="glic-rot">Glicemia atual</span>
+                <span class="glic-selo">NO ALVO</span>
+              </div>
+              <div class="glic-val"><span class="glic-num">142</span><span class="glic-un">mg/dL</span></div>
+              <div class="glic-tend">↗ Estável nas últimas 3 horas</div>
+              <svg class="grafico" viewBox="0 0 240 60" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="gradLinha" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#22D3EE"/>
+                    <stop offset="55%" stop-color="#60A5FA"/>
+                    <stop offset="100%" stop-color="#C4B5FD"/>
+                  </linearGradient>
+                  <linearGradient id="gradArea" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#3B82F6" stop-opacity=".42"/>
+                    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="gradFaixa" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#34D399" stop-opacity=".15"/>
+                    <stop offset="100%" stop-color="#34D399" stop-opacity=".03"/>
+                  </linearGradient>
+                </defs>
+                <rect x="0" y="16" width="240" height="27" fill="url(#gradFaixa)"/>
+                <path class="area-graf" d="M4,44 L28,37 L52,41 L76,25 L100,31 L124,20 L148,28 L172,15 L196,26 L232,22 L232,60 L4,60 Z"/>
+                <path class="linha-graf" d="M4,44 L28,37 L52,41 L76,25 L100,31 L124,20 L148,28 L172,15 L196,26 L232,22"/>
+                <circle class="ponta-halo" cx="232" cy="22" r="7"/>
+                <circle class="ponta" cx="232" cy="22" r="3.4"/>
+              </svg>
+            </div>
+
+            <div class="aneis">
+              <div class="anel-cx">
+                <svg width="40" height="40" viewBox="0 0 42 42" aria-hidden="true">
+                  <circle class="anel-tr" cx="21" cy="21" r="17"/>
+                  <circle class="anel-pr" cx="21" cy="21" r="17" pathLength="100" stroke="#34D399" style="--fim:0"/>
+                </svg>
+                <b>Medir</b><span>2 de 2</span>
+              </div>
+              <div class="anel-cx">
+                <svg width="40" height="40" viewBox="0 0 42 42" aria-hidden="true">
+                  <circle class="anel-tr" cx="21" cy="21" r="17"/>
+                  <circle class="anel-pr" cx="21" cy="21" r="17" pathLength="100" stroke="#22D3EE" style="--fim:0;animation-delay:.85s"/>
+                </svg>
+                <b>Alimentar</b><span>3 de 3</span>
+              </div>
+              <div class="anel-cx">
+                <svg width="40" height="40" viewBox="0 0 42 42" aria-hidden="true">
+                  <circle class="anel-tr" cx="21" cy="21" r="17"/>
+                  <circle class="anel-pr" cx="21" cy="21" r="17" pathLength="100" stroke="#FBBF24" style="--fim:40;animation-delay:1s"/>
+                </svg>
+                <b>Mover</b><span>18/30 min</span>
+              </div>
+            </div>
+
+            <div class="cartao-essi">
+              <div class="essi-orb" aria-hidden="true"></div>
+              <div class="essi-txt">
+                <b>Essi está animado!</b>
+                <span>Nível 12 · faltam 340 pontos</span>
+                <div class="essi-xp"><i></i></div>
+              </div>
+              <span class="essi-coins">+45</span>
+            </div>
+
+            <div class="app-nav">
+              <span class="ativo"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.4 12 3l9 7.4"/><path d="M5.6 9.4V21h12.8V9.4"/></svg>Início</span>
+              <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 20V11"/><path d="M10 20V4"/><path d="M16 20v-6"/><path d="M21 20H3"/></svg>Relatórios</span>
+              <span class="fab" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+              <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.6a8 8 0 0 1-11.5 7.2L3 21l2.2-6.4A8 8 0 1 1 21 11.6Z"/></svg>Conversar</span>
+              <span><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.9"/><circle cx="12" cy="12" r="1.9"/><circle cx="19" cy="12" r="1.9"/></svg>Mais</span>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="balao balao-2">
-        <b>🏥 Rede de cuidado</b><span>parceiros perto de você</span>
+        <b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7DD3FC" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg> Rede de cuidado</b>
+        <span>parceiros perto de você</span>
       </div>
     </div>
   </div>
