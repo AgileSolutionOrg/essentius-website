@@ -7,7 +7,6 @@ function Ok($msg) { "  OK    $msg" }
 
 $paginas = @(
     @{ arq = "$w\index.html";                              url = "https://essentius.com.br/" },
-    @{ arq = "$w\para-voce\index.html";                    url = "https://essentius.com.br/para-voce/" },
     @{ arq = "$w\app-para-controlar-diabetes\index.html";  url = "https://essentius.com.br/app-para-controlar-diabetes/" },
     @{ arq = "$w\perguntas-frequentes\index.html";         url = "https://essentius.com.br/perguntas-frequentes/" },
     @{ arq = "$w\politica-de-privacidade\index.html";      url = "https://essentius.com.br/politica-de-privacidade/" },
