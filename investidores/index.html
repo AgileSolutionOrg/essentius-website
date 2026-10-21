@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Essentius para investidores</title>
+<meta name="description" content="Agente de IA, gamificação e um ecossistema de cuidado — farmácias, laboratórios, oftalmologia, podologia e nutrição — em volta de cada pessoa com diabetes. Plataforma brasileira em produção."/>
+<link rel="canonical" href="https://essentius.com.br/investidores/"/>
+<meta name="robots" content="noindex, follow"/>
+<meta name="theme-color" content="#070C1B"/>
+
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+<link rel="icon" type="image/png" href="/assets/logo.png"/>
+<link rel="apple-touch-icon" href="/assets/logo.png"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Essentius"/>
+<meta property="og:title" content="Essentius | A plataforma de cuidado diário do diabetes"/>
+<meta property="og:description" content="Agente de IA, gamificação e um ecossistema de cuidado em volta de cada pessoa com diabetes. Plataforma brasileira em produção."/>
+<meta property="og:url" content="https://essentius.com.br/investidores/"/>
+<meta property="og:locale" content="pt_BR"/>
+<!-- 1200x630 e JPEG opaco de proposito: abaixo de 600x315 o WhatsApp desiste do
+     card grande e mostra o link cru, e o crawler descarta PNG com transparencia. -->
+<meta property="og:image" content="https://essentius.com.br/assets/og-essentius.jpg"/>
+<meta property="og:image:secure_url" content="https://essentius.com.br/assets/og-essentius.jpg"/>
+<meta property="og:image:type" content="image/jpeg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Essentius — seu agente de inteligência artificial para o cuidado diário do diabetes"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Essentius | A plataforma de cuidado diário do diabetes"/>
+<meta name="twitter:description" content="Agente de IA, gamificação e um ecossistema de cuidado em volta de cada pessoa com diabetes."/>
+<meta name="twitter:image" content="https://essentius.com.br/assets/og-essentius.jpg"/>
+
+<!-- Dados estruturados: diz ao Google que isto e um aplicativo de saude
+     brasileiro, e nao mais um artigo sobre diabetes. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://essentius.com.br/#organizacao",
+      "name": "Essentius",
+      "url": "https://essentius.com.br/",
+      "logo": "https://essentius.com.br/assets/logo.png",
+      "sameAs": ["https://www.instagram.com/essentius/"],
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Agile Solution",
+        "url": "https://agilesolution.com.br/"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://essentius.com.br/#site",
+      "url": "https://essentius.com.br/",
+      "name": "Essentius",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://essentius.com.br/#organizacao" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://essentius.com.br/#app",
+      "name": "Essentius",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Android, iOS",
+      "inLanguage": "pt-BR",
+      "url": "https://essentius.com.br/",
+      "description": "Plataforma brasileira para o cuidado diario do diabetes: registro de glicemia, refeicoes e exames, agente de inteligencia artificial que orienta em linguagem simples, gamificacao que recompensa o cuidado e um ecossistema de parceiros de saude em volta do usuario.",
+      "publisher": { "@id": "https://essentius.com.br/#organizacao" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL",
+        "description": "Gratuito no lancamento"
+      },
+      "featureList": [
+        "Registro de glicemia em dois toques",
+        "Analise de refeicao por foto",
+        "Leitura e explicacao de exames",
+        "Integracao com sensores de glicemia",
+        "Agente de IA especializado em diabetes",
+        "Gamificacao que recompensa o cuidado",
+        "Ecossistema de parceiros de saude"
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+<!-- CSS escrito a mao, sem Tailwind por CDN. O CDN compilava o CSS no navegador
+     a cada visita e bloqueava a primeira renderizacao — que e exatamente o que
+     o Google mede em Core Web Vitals. -->
+<style>
+  :root{
+    --azul:#3B82F6; --ciano:#22D3EE; --roxo:#8B5CF6; --verde:#34D399; --ambar:#FBBF24;
+    --fundo:#070C1B; --fundo-2:#0A1124; --fundo-3:#0D152E;
+    --tinta:#EEF3FF; --texto:#A9B6D6; --apagado:#7A88AC;
+    --linha:rgba(255,255,255,.10); --linha-forte:rgba(255,255,255,.18);
+    --vidro:rgba(255,255,255,.045);
+    --raio:18px; --container:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;background:var(--fundo)}
+  body{font-family:Manrope,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--tinta);
+       background:var(--fundo);line-height:1.62;-webkit-font-smoothing:antialiased;
+       overflow-x:hidden}
+  .env{max-width:var(--container);margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  img{max-width:100%;height:auto;display:block}
+  ::selection{background:rgba(59,130,246,.4)}
+
+  .marca{background:linear-gradient(100deg,#67E8F9,#60A5FA 45%,#A78BFA);
+         -webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* ---------- navegacao ---------- */
+  .nav{position:sticky;top:0;z-index:60;background:rgba(7,12,27,.72);
+       backdrop-filter:blur(16px);border-bottom:1px solid var(--linha)}
+  .nav .env{display:flex;align-items:center;justify-content:space-between;height:70px;gap:24px}
+  .nav-logo{display:flex;align-items:center;text-decoration:none}
+  .nav-logo img{height:42px;width:auto}
+  .nav-links{display:flex;gap:26px;font-size:.93rem;font-weight:600;color:var(--texto)}
+  .nav-links a{text-decoration:none;transition:color .15s}
+  .nav-links a:hover{color:#fff}
+  @media(max-width:1000px){.nav-links{display:none}}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:13px;
+       font-weight:700;text-decoration:none;font-size:.97rem;border:0;cursor:pointer;
+       transition:transform .16s,box-shadow .16s,background .16s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primario{background:linear-gradient(100deg,#2563EB,#7C3AED);color:#fff;
+                box-shadow:0 10px 30px rgba(59,130,246,.35)}
+  .btn-primario:hover{box-shadow:0 16px 40px rgba(99,102,241,.45)}
+  .btn-vidro{background:var(--vidro);color:#fff;border:1px solid var(--linha-forte);
+             backdrop-filter:blur(8px)}
+  .btn-vidro:hover{background:rgba(255,255,255,.10)}
+  .btn-claro{background:#fff;color:#0B1224;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden;padding:76px 0 90px}
+  .aurora{position:absolute;inset:-30% -20% auto -20%;height:150%;pointer-events:none;z-index:0}
+  .aurora span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;
+               animation:flutuar 18s ease-in-out infinite}
+  .a1{width:620px;height:520px;left:2%;top:4%;background:rgba(34,211,238,.30)}
+  .a2{width:680px;height:560px;right:4%;top:0%;background:rgba(124,58,237,.34);animation-delay:-6s}
+  .a3{width:560px;height:440px;left:38%;top:46%;background:rgba(37,99,235,.30);animation-delay:-12s}
+  @keyframes flutuar{
+    0%,100%{transform:translate3d(0,0,0) scale(1)}
+    33%{transform:translate3d(38px,-26px,0) scale(1.07)}
+    66%{transform:translate3d(-30px,22px,0) scale(.95)}
+  }
+  .grade-fundo{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.32;
+    background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(circle at 50% 25%,#000 0%,transparent 72%);
+    mask-image:radial-gradient(circle at 50% 25%,#000 0%,transparent 72%)}
+
+  .hero .env{position:relative;z-index:1;display:grid;grid-template-columns:1.06fr .94fr;
+             gap:56px;align-items:center}
+  @media(max-width:980px){.hero .env{grid-template-columns:1fr;gap:52px}}
+
+  .selo{display:inline-flex;align-items:center;gap:9px;font-size:.76rem;font-weight:800;
+        letter-spacing:.09em;text-transform:uppercase;color:#8FD9F0;
+        border:1px solid rgba(103,232,249,.30);background:rgba(34,211,238,.08);
+        border-radius:999px;padding:8px 16px;margin-bottom:24px}
+  .ponto{width:7px;height:7px;border-radius:50%;background:var(--verde);
+         box-shadow:0 0 0 0 rgba(52,211,153,.55);animation:pulsar 2.2s ease-out infinite}
+  @keyframes pulsar{
+    0%{box-shadow:0 0 0 0 rgba(52,211,153,.55)}
+    70%{box-shadow:0 0 0 9px rgba(52,211,153,0)}
+    100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}
+  }
+  h1{font-size:clamp(2.35rem,5.4vw,3.85rem);line-height:1.06;font-weight:800;letter-spacing:-.025em}
+  .chamada{font-size:clamp(1.04rem,1.9vw,1.2rem);color:var(--texto);margin:24px 0 34px;max-width:34em}
+  .acoes{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-nota{margin-top:28px;font-size:.87rem;color:var(--apagado)}
+  .hero-nota b{color:#C7D3EE;font-weight:700}
+
+  /* ---------- palco: dois aparelhos em perspectiva ---------- */
+  .palco{position:relative;min-height:700px;display:flex;align-items:center;
+         justify-content:flex-end;perspective:1600px}
+  @media(max-width:980px){.palco{justify-content:center;min-height:660px}}
+  .halo{position:absolute;left:52%;top:50%;transform:translate(-50%,-50%);pointer-events:none;
+        width:560px;height:560px;border-radius:50%;filter:blur(34px);
+        background:radial-gradient(circle,rgba(59,130,246,.32),rgba(139,92,246,.15) 46%,transparent 71%)}
+
+  .aparelho{animation:boiar 7.5s ease-in-out infinite}
+  @keyframes boiar{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+  .aparelho-frente{position:relative;z-index:3}
+  .aparelho-tras{position:absolute;left:-2%;top:74px;z-index:1;animation-delay:-3.4s}
+  @media(max-width:1140px){.aparelho-tras{display:none}}
+
+  .fone{position:relative;border-radius:46px;padding:9px;
+        background:linear-gradient(148deg,#6B78A4 0%,#2B3454 16%,#161D35 54%,#090F1E 100%);
+        box-shadow:0 54px 104px rgba(0,0,0,.72),0 10px 30px rgba(0,0,0,.55),
+                   0 0 0 1px rgba(255,255,255,.11) inset}
+  .fone-g{width:300px;transform:rotateY(-10deg) rotateX(3deg)}
+  .fone-p{width:250px;transform:rotateY(14deg) rotateX(2deg)}
+  .fone::before,.fone::after{content:"";position:absolute;border-radius:4px;
+        background:linear-gradient(180deg,#5A6790,#242C48)}
+  .fone::before{left:-2.5px;top:108px;width:3px;height:32px;box-shadow:0 42px 0 #4A5578}
+  .fone::after{right:-2.5px;top:150px;width:3px;height:66px}
+
+  .tela{position:relative;border-radius:38px;overflow:hidden;padding:11px 14px 10px;
+        background:linear-gradient(178deg,#080E20,#0F1836 55%,#151F45)}
+  .tela::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+        background:linear-gradient(122deg,rgba(255,255,255,.10),rgba(255,255,255,0) 34%,
+                                   rgba(255,255,255,0) 72%,rgba(255,255,255,.05))}
+  .ilha{position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:5;
+        width:82px;height:24px;border-radius:99px;background:#04060E;
+        box-shadow:0 0 0 1px rgba(255,255,255,.06)}
+  .ilha::after{content:"";position:absolute;right:8px;top:50%;transform:translateY(-50%);
+        width:8px;height:8px;border-radius:50%;
+        background:radial-gradient(circle at 34% 32%,#24456F,#060A16 68%);
+        box-shadow:0 0 0 1px rgba(120,180,255,.18)}
+  .fone-p .ilha{width:68px;height:21px;top:9px}
+
+  .status{position:relative;z-index:6;display:flex;justify-content:space-between;align-items:center;
+          height:25px;padding:0 5px;font-size:.63rem;font-weight:700;color:#E2E9FA;letter-spacing:.01em}
+  .status div{display:flex;align-items:center;gap:5px}
+  .status svg{display:block}
+
+  /* ---- painel do dia ---- */
+  .app-topo{display:flex;align-items:center;justify-content:space-between;margin:9px 0 12px}
+  .app-marca{display:flex;align-items:center;gap:7px;font-weight:800;font-size:.82rem;letter-spacing:-.01em}
+  .app-sino{position:relative;color:#8FA0C4;display:block}
+  .app-sino::after{content:"";position:absolute;top:-1px;right:-1px;width:6px;height:6px;border-radius:50%;
+                   background:#F87171;box-shadow:0 0 0 2px #101838}
+  .app-saud{font-size:.97rem;font-weight:800;letter-spacing:-.015em}
+  .app-sub{font-size:.66rem;color:#8FA0C4;margin:1px 0 12px}
+
+  .cartao-glic{position:relative;border-radius:19px;padding:12px 14px 7px;
+               background:linear-gradient(155deg,rgba(59,130,246,.28),rgba(139,92,246,.17) 58%,rgba(34,211,238,.10));
+               box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 12px 28px rgba(0,0,0,.32)}
+  .glic-topo{display:flex;justify-content:space-between;align-items:flex-start}
+  .glic-rot{font-size:.59rem;color:#BCC9E6;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+  .glic-selo{font-size:.54rem;font-weight:800;letter-spacing:.04em;padding:3px 8px;border-radius:99px;
+             background:rgba(52,211,153,.18);color:#6EE7B7;
+             box-shadow:0 0 0 1px rgba(52,211,153,.32) inset;white-space:nowrap}
+  .glic-val{display:flex;align-items:baseline;gap:6px;margin:4px 0 1px}
+  .glic-num{font-size:2.3rem;font-weight:800;letter-spacing:-.038em;line-height:1;
+            text-shadow:0 0 28px rgba(147,197,253,.5)}
+  .glic-un{font-size:.67rem;color:#9FE4F5;font-weight:700}
+  .glic-tend{font-size:.61rem;color:#7CE0B0;font-weight:700}
+  .grafico{width:100%;height:60px;display:block;margin-top:5px;overflow:visible}
+  .area-graf{fill:url(#gradArea);opacity:0;animation:aparecer 1.2s 1.4s ease-out forwards}
+  @keyframes aparecer{to{opacity:1}}
+  .linha-graf{fill:none;stroke:url(#gradLinha);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;
+              stroke-dasharray:300;stroke-dashoffset:300;animation:desenhar 2.1s .3s ease-out forwards;
+              filter:drop-shadow(0 2px 9px rgba(96,165,250,.6))}
+  @keyframes desenhar{to{stroke-dashoffset:0}}
+  .ponta{fill:#fff;opacity:0;animation:aparecer .5s 2.1s ease-out forwards}
+  .ponta-halo{fill:#93C5FD;opacity:0;animation:aparecer .5s 2.1s ease-out forwards,
+                                              latejar 2.6s 2.6s ease-out infinite}
+  @keyframes latejar{0%,100%{opacity:.42}50%{opacity:.10}}
+
+  .aneis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:11px}
+  .anel-cx{border-radius:15px;padding:9px 3px 8px;text-align:center;
+           background:rgba(255,255,255,.045);box-shadow:0 0 0 1px rgba(255,255,255,.07) inset}
+  .anel-cx svg{margin:0 auto 5px;display:block}
+  .anel-tr{fill:none;stroke:rgba(255,255,255,.11);stroke-width:5}
+  .anel-pr{fill:none;stroke-width:5;stroke-linecap:round;stroke-dasharray:100 100;
+           stroke-dashoffset:var(--fim,0);transform:rotate(-90deg);transform-origin:50% 50%;
+           animation:preencher 1.5s .7s cubic-bezier(.4,0,.2,1) backwards}
+  @keyframes preencher{from{stroke-dashoffset:100}}
+  .anel-cx b{display:block;font-size:.58rem;font-weight:800;letter-spacing:.01em}
+  .anel-cx span{font-size:.5rem;color:#8FA0C4;font-weight:700}
+
+  .cartao-essi{display:flex;align-items:center;gap:10px;margin-top:10px;padding:9px 11px;
+               border-radius:16px;
+               background:linear-gradient(118deg,rgba(139,92,246,.22),rgba(34,211,238,.12));
+               box-shadow:0 0 0 1px rgba(255,255,255,.10) inset}
+  .essi-orb{position:relative;width:34px;height:34px;flex:none;border-radius:50%;
+            background:radial-gradient(circle at 34% 28%,#CFFAFE,#38BDF8 40%,#7C3AED 100%);
+            box-shadow:0 0 20px rgba(96,165,250,.75),0 0 0 2px rgba(255,255,255,.14) inset;
+            animation:respirar 3.2s ease-in-out infinite}
+  @keyframes respirar{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+  .essi-txt{flex:1;min-width:0}
+  .essi-txt b{display:block;font-size:.69rem;font-weight:800}
+  .essi-txt span{font-size:.57rem;color:#9DAAC9;font-weight:600}
+  .essi-xp{height:4px;border-radius:99px;background:rgba(255,255,255,.13);margin-top:5px;overflow:hidden}
+  .essi-xp i{display:block;height:100%;width:0;border-radius:99px;
+             background:linear-gradient(90deg,#22D3EE,#A78BFA);animation:encher 1.7s 1s ease-out forwards}
+  @keyframes encher{to{width:72%}}
+  .essi-coins{flex:none;font-size:.62rem;font-weight:800;color:#FCD34D;white-space:nowrap}
+
+  .app-nav{display:flex;justify-content:space-between;align-items:center;margin-top:12px;
+           padding-top:9px;border-top:1px solid rgba(255,255,255,.08)}
+  .app-nav span{display:flex;flex-direction:column;align-items:center;gap:3px;
+                font-size:.49rem;font-weight:700;color:#6F7D9F;letter-spacing:.02em}
+  .app-nav .ativo{color:#8FD9F0}
+  .app-nav .fab{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;
+                background:linear-gradient(140deg,#22D3EE,#3B82F6 46%,#8B5CF6);
+                box-shadow:0 8px 22px rgba(59,130,246,.62)}
+
+  /* ---- conversa com o agente (aparelho de tras) ---- */
+  .chat-topo{display:flex;align-items:center;gap:8px;margin:9px 0 13px}
+  .chat-nome b{display:block;font-size:.71rem;font-weight:800}
+  .chat-nome span{display:flex;align-items:center;gap:4px;font-size:.54rem;color:#6EE7B7;font-weight:700}
+  .msg{max-width:88%;padding:8px 11px;border-radius:15px;font-size:.61rem;line-height:1.52;margin-bottom:7px}
+  .msg-eu{margin-left:auto;color:#fff;border-bottom-right-radius:5px;
+          background:linear-gradient(118deg,#2563EB,#7C3AED)}
+  .msg-ia{color:#D7E0F4;border-bottom-left-radius:5px;background:rgba(255,255,255,.07);
+          box-shadow:0 0 0 1px rgba(255,255,255,.07) inset}
+  .msg-fonte{display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:3px 8px;
+             border-radius:99px;font-size:.49rem;font-weight:800;letter-spacing:.04em;
+             color:#8FD9F0;background:rgba(34,211,238,.13)}
+  .digitando{display:flex;gap:4px;width:-moz-fit-content;width:fit-content;padding:10px 12px;
+             border-radius:15px;border-bottom-left-radius:5px;background:rgba(255,255,255,.07)}
+  .digitando i{width:5px;height:5px;border-radius:50%;background:#93A2C4;animation:saltar 1.3s infinite}
+  .digitando i:nth-child(2){animation-delay:.16s}
+  .digitando i:nth-child(3){animation-delay:.32s}
+  @keyframes saltar{0%,62%,100%{opacity:.28;transform:translateY(0)}
+                    31%{opacity:1;transform:translateY(-3px)}}
+
+  /* ---- ciclo de telas: cada aparelho passeia pelas funcoes ---- */
+  .cenas{position:relative}
+  .fone-g .cenas{height:398px}
+  .fone-p .cenas{height:338px}
+  .cena{position:absolute;inset:0;overflow:hidden;opacity:0;
+        animation:ciclo 20s infinite}
+  .cena:first-child{opacity:1}
+  @keyframes ciclo{
+    0%{opacity:0;transform:translateY(10px) scale(.982)}
+    2.4%{opacity:1;transform:none}
+    18%{opacity:1;transform:none}
+    20.4%{opacity:0;transform:translateY(-10px) scale(.982)}
+    100%{opacity:0;transform:translateY(10px) scale(.982)}
+  }
+  .cena:nth-child(2){animation-delay:-16s}
+  .cena:nth-child(3){animation-delay:-12s}
+  .cena:nth-child(4){animation-delay:-8s}
+  .cena:nth-child(5){animation-delay:-4s}
+  .fone-p .cena{animation-delay:-2s}
+  .fone-p .cena:nth-child(2){animation-delay:-18s}
+  .fone-p .cena:nth-child(3){animation-delay:-14s}
+  .fone-p .cena:nth-child(4){animation-delay:-10s}
+  .fone-p .cena:nth-child(5){animation-delay:-6s}
+
+  .tit-cena{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
+  .tit-cena b{font-size:.81rem;font-weight:800;letter-spacing:-.012em}
+  .tit-cena span{font-size:.55rem;color:#8FA0C4;font-weight:700}
+  .bloco{border-radius:16px;padding:11px 12px;background:rgba(255,255,255,.05);
+         box-shadow:0 0 0 1px rgba(255,255,255,.08) inset}
+  .bloco+.bloco{margin-top:8px}
+  .item{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:13px;
+        background:rgba(255,255,255,.045);box-shadow:0 0 0 1px rgba(255,255,255,.07) inset}
+  .item+.item{margin-top:6px}
+  .item-ic{width:27px;height:27px;border-radius:9px;flex:none;display:grid;place-items:center;
+           color:#A5DDF5;background:linear-gradient(140deg,rgba(34,211,238,.20),rgba(139,92,246,.24))}
+  .item-tx{flex:1;min-width:0}
+  .item-tx b{display:block;font-size:.62rem;font-weight:800;white-space:nowrap;overflow:hidden;
+             text-overflow:ellipsis}
+  .item-tx span{display:block;font-size:.53rem;color:#8FA0C4;font-weight:600;white-space:nowrap;
+                overflow:hidden;text-overflow:ellipsis}
+  .item-vl{flex:none;font-size:.61rem;font-weight:800;white-space:nowrap}
+  .pt-cor{width:9px;height:9px;border-radius:50%;flex:none}
+  .chip{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:99px;
+        font-size:.51rem;font-weight:800;letter-spacing:.03em;white-space:nowrap}
+  .chip-ok{background:rgba(52,211,153,.17);color:#6EE7B7}
+  .chip-in{background:rgba(34,211,238,.15);color:#8FD9F0}
+  .chip-am{background:rgba(251,191,36,.16);color:#FCD34D}
+  .barra{height:6px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:8px}
+  .barra i{display:block;height:100%;border-radius:99px}
+  .escala{display:flex;justify-content:space-between;margin-top:4px;
+          font-size:.49rem;color:#8FA0C4;font-weight:700}
+  .foto-prato{position:relative;height:92px;border-radius:15px;overflow:hidden}
+  .foto-prato img{width:100%;height:100%;object-fit:cover}
+  .foto-prato .chip{position:absolute;right:7px;bottom:7px;color:#E4EBFB;
+                    background:rgba(6,10,22,.72);backdrop-filter:blur(6px)}
+  .grande{font-size:1.62rem;font-weight:800;letter-spacing:-.032em;line-height:1.05}
+  .grande small{font-size:.58rem;font-weight:700;color:#9FE4F5;margin-left:4px;letter-spacing:0}
+  .fala{display:flex;gap:8px}
+  .fala p{font-size:.59rem;line-height:1.52;color:#D7E0F4}
+  .conquistas{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:9px}
+  .conq{border-radius:13px;padding:9px 3px;text-align:center;background:rgba(255,255,255,.05);
+        box-shadow:0 0 0 1px rgba(255,255,255,.07) inset}
+  .conq b{display:block;font-size:.7rem;font-weight:800}
+  .conq span{font-size:.46rem;color:#8FA0C4;font-weight:700}
+  .alerta{border-radius:16px;padding:12px;
+          background:linear-gradient(140deg,rgba(248,113,113,.26),rgba(251,146,60,.13));
+          box-shadow:0 0 0 1px rgba(248,113,113,.38) inset}
+
+  .balao{position:absolute;z-index:4;padding:11px 15px;border-radius:16px;white-space:nowrap;
+         background:rgba(11,18,40,.82);backdrop-filter:blur(14px);
+         box-shadow:0 0 0 1px rgba(255,255,255,.14) inset,0 22px 48px rgba(0,0,0,.62);
+         animation:boiar 8.5s ease-in-out infinite}
+  .balao b{display:flex;align-items:center;gap:7px;font-size:.8rem;font-weight:800}
+  .balao span{display:block;font-size:.65rem;color:var(--apagado);font-weight:600;margin-top:1px}
+  .balao-1{top:18px;left:4%;animation-delay:-2s}
+  .balao-2{bottom:64px;left:2%;animation-delay:-5s}
+  @media(max-width:1140px){.balao-1{top:0;left:0}.balao-2{bottom:24px;left:0}}
+  @media(max-width:600px){.balao{display:none}}
+
+  /* ---------- secoes ---------- */
+  section{padding:96px 0;position:relative}
+  .listra{background:var(--fundo-2);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+  .titulo{font-size:clamp(1.85rem,3.6vw,2.65rem);font-weight:800;letter-spacing:-.024em;
+          line-height:1.16;margin-bottom:18px}
+  .sub{color:var(--texto);font-size:1.05rem;max-width:46em}
+  .olho{font-size:.76rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;
+        color:#7DD3FC;margin-bottom:14px}
+  .centro{text-align:center}
+  .centro .sub{margin-left:auto;margin-right:auto}
+
+  /* ---------- numeros ---------- */
+  .numeros{padding:56px 0}
+  .numeros-grade{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  @media(max-width:900px){.numeros-grade{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.numeros-grade{grid-template-columns:1fr}}
+  .num-cx{background:var(--vidro);border:1px solid var(--linha);border-radius:var(--raio);
+          padding:26px 24px;text-align:center;transition:border-color .2s,transform .2s}
+  .num-cx:hover{border-color:var(--linha-forte);transform:translateY(-3px)}
+  .num{font-size:clamp(1.9rem,3.6vw,2.5rem);font-weight:800;letter-spacing:-.03em;line-height:1.1}
+  .num-txt{color:var(--texto);font-size:.9rem;margin-top:8px;line-height:1.5}
+  .fonte{text-align:center;color:var(--apagado);font-size:.79rem;margin-top:26px}
+  .fonte a{color:#8FA0C4}
+
+  /* ---------- cartoes ---------- */
+  .grade-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+  @media(max-width:900px){.grade-3{grid-template-columns:1fr}}
+  .grade-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:52px}
+  @media(max-width:820px){.grade-2{grid-template-columns:1fr}}
+  .cartao{background:var(--vidro);border:1px solid var(--linha);border-radius:var(--raio);
+          padding:30px;transition:transform .2s,border-color .2s,box-shadow .2s;position:relative;
+          overflow:hidden}
+  .cartao:hover{transform:translateY(-5px);border-color:var(--linha-forte);
+                box-shadow:0 24px 60px rgba(0,0,0,.42)}
+  .cartao h3{font-size:1.16rem;font-weight:800;margin-bottom:11px;letter-spacing:-.01em}
+  .cartao p{color:var(--texto);font-size:.97rem}
+  .icone{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;
+         margin-bottom:20px;font-size:1.4rem;border:1px solid var(--linha);
+         background:linear-gradient(140deg,rgba(34,211,238,.16),rgba(139,92,246,.18))}
+
+  .duas{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  @media(max-width:900px){.duas{grid-template-columns:1fr;gap:40px}}
+  .duas img{border-radius:var(--raio);border:1px solid var(--linha);
+            box-shadow:0 26px 64px rgba(0,0,0,.5)}
+
+  /* ---------- ecossistema / orbita ---------- */
+  .orbita{position:relative;width:100%;max-width:620px;aspect-ratio:1/1;margin:56px auto 0}
+  @media(max-width:820px){.orbita{display:none}}
+  .orbita-svg{position:absolute;inset:0;width:100%;height:100%}
+  .anel{fill:none;stroke:rgba(255,255,255,.10);stroke-dasharray:4 8}
+  .anel-gira{transform-origin:50% 50%;animation:girar 60s linear infinite}
+  @keyframes girar{to{transform:rotate(360deg)}}
+  .raio{stroke:rgba(125,211,252,.22);stroke-width:1}
+  .nucleo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+          width:34%;aspect-ratio:1/1;border-radius:50%;display:grid;place-items:center;
+          text-align:center;padding:10px;
+          background:radial-gradient(circle at 50% 35%,rgba(59,130,246,.35),rgba(11,18,38,.95) 70%);
+          border:1px solid rgba(125,211,252,.35);
+          box-shadow:0 0 70px rgba(59,130,246,.35),0 0 0 10px rgba(59,130,246,.05)}
+  .nucleo img{width:52px;height:auto;margin:0 auto 8px}
+  .nucleo b{display:block;font-size:1.05rem;font-weight:800;letter-spacing:-.01em}
+  .nucleo span{font-size:.68rem;color:var(--texto);line-height:1.4;display:block;margin-top:4px}
+  .no{position:absolute;transform:translate(-50%,-50%);width:126px;text-align:center;
+      background:rgba(13,21,46,.9);border:1px solid var(--linha);border-radius:14px;
+      padding:12px 8px;backdrop-filter:blur(8px);transition:border-color .2s,transform .2s}
+  .no:hover{border-color:rgba(125,211,252,.5);transform:translate(-50%,-50%) scale(1.06)}
+  .no i{font-style:normal;font-size:1.25rem;display:block;margin-bottom:5px}
+  .no b{display:block;font-size:.78rem;font-weight:800}
+  .no span{font-size:.63rem;color:var(--apagado);font-weight:600}
+
+  .orbita-lista{display:none;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:44px}
+  @media(max-width:820px){.orbita-lista{display:grid}}
+  @media(max-width:420px){.orbita-lista{grid-template-columns:1fr}}
+  .orbita-lista div{background:var(--vidro);border:1px solid var(--linha);border-radius:13px;
+                    padding:14px 15px}
+  .orbita-lista i{font-style:normal;font-size:1.1rem;display:block;margin-bottom:5px}
+  .orbita-lista b{display:block;font-size:.88rem}
+  .orbita-lista span{font-size:.74rem;color:var(--apagado)}
+
+  /* ---------- os dois lados da rede ---------- */
+  .rede{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:stretch;margin-top:52px}
+  @media(max-width:940px){.rede{grid-template-columns:1fr;gap:16px}}
+  .lado{background:var(--vidro);border:1px solid var(--linha);border-radius:var(--raio);padding:28px 26px}
+  .lado-rot{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+            color:#7DD3FC;margin-bottom:6px}
+  .lado h3{font-size:1.22rem;font-weight:800;letter-spacing:-.015em;margin-bottom:18px}
+  .lado ul{list-style:none}
+  .lado li{display:flex;align-items:flex-start;gap:11px;padding:11px 0;font-size:.96rem;
+           color:var(--texto);border-top:1px solid var(--linha)}
+  .lado li:first-child{border-top:0;padding-top:0}
+  .lado li b{color:var(--tinta);font-weight:700}
+  .marcador{flex:none;width:7px;height:7px;border-radius:50%;margin-top:9px;
+            background:linear-gradient(140deg,#22D3EE,#8B5CF6)}
+  .meio{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+        padding:0 6px}
+  @media(max-width:940px){.meio{flex-direction:row;padding:6px 0}}
+  .meio img{width:56px;height:auto}
+  .meio-nome{font-size:.94rem;font-weight:800;text-align:center;line-height:1.3}
+  .meio-txt{font-size:.76rem;color:var(--apagado);text-align:center;max-width:15em;line-height:1.45}
+  @media(max-width:940px){.meio-txt{max-width:24em;text-align:left}}
+  .seta{color:#7DD3FC;opacity:.55;font-size:1.3rem;line-height:1}
+  @media(max-width:940px){.seta{display:none}}
+
+  /* ---------- a conta do consumo recorrente ---------- */
+  .tabela{margin-top:52px;border:1px solid var(--linha);border-radius:var(--raio);overflow:hidden;
+          background:var(--vidro)}
+  .tab-l{display:grid;grid-template-columns:1fr auto;gap:20px;padding:16px 24px;align-items:center;
+         border-top:1px solid var(--linha)}
+  .tab-l:first-child{border-top:0;background:rgba(255,255,255,.045)}
+  .tab-l:first-child span{font-size:.72rem;font-weight:800;letter-spacing:.12em;
+                          text-transform:uppercase;color:var(--apagado)}
+  .tab-l b{display:block;font-size:1rem;font-weight:700}
+  .tab-l em{font-style:normal;display:block;font-size:.84rem;color:var(--apagado);margin-top:2px}
+  .tab-freq{font-size:.98rem;font-weight:800;white-space:nowrap;color:#93C5FD}
+  @media(max-width:620px){.tab-l{padding:14px 18px;gap:10px}.tab-l b{font-size:.94rem}}
+
+  .soma{margin-top:26px;border-radius:var(--raio);padding:34px 30px;text-align:center;
+        background:linear-gradient(150deg,rgba(59,130,246,.16),rgba(139,92,246,.12));
+        border:1px solid var(--linha-forte)}
+  .soma-num{font-size:clamp(2.2rem,5.4vw,3.4rem);font-weight:800;letter-spacing:-.035em;line-height:1.05}
+  .soma p{color:var(--texto);font-size:1.02rem;max-width:40em;margin:14px auto 0}
+  .soma small{display:block;color:var(--apagado);font-size:.8rem;margin-top:18px;line-height:1.6}
+
+  /* ---------- o ciclo ---------- */
+  .ciclo{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:52px}
+  @media(max-width:940px){.ciclo{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.ciclo{grid-template-columns:1fr}}
+  .passo{position:relative;background:var(--vidro);border:1px solid var(--linha);
+         border-radius:var(--raio);padding:26px 22px;transition:border-color .2s,transform .2s}
+  .passo:hover{transform:translateY(-4px);border-color:var(--linha-forte)}
+  .passo-n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+           font-size:.82rem;font-weight:800;margin-bottom:15px;color:#0B1224;
+           background:linear-gradient(140deg,#67E8F9,#A78BFA)}
+  .passo b{display:block;font-size:1.02rem;font-weight:800;margin-bottom:8px;letter-spacing:-.01em}
+  .passo p{color:var(--texto);font-size:.92rem}
+  .ciclo-nota{text-align:center;color:var(--apagado);font-size:.9rem;margin-top:26px}
+
+  /* ---------- trilha do essi ---------- */
+  .niveis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:52px}
+  @media(max-width:900px){.niveis{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.niveis{grid-template-columns:repeat(2,1fr)}}
+  .nivel{background:var(--vidro);border:1px solid var(--linha);border-radius:16px;
+         padding:22px 16px;text-align:center;position:relative;transition:transform .2s,border-color .2s}
+  .nivel:hover{transform:translateY(-4px);border-color:var(--linha-forte)}
+  .aura{width:62px;height:62px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;
+        font-size:1.5rem;border:1px solid rgba(255,255,255,.14)}
+  .n1{background:linear-gradient(140deg,rgba(148,163,184,.3),rgba(100,116,139,.16))}
+  .n2{background:linear-gradient(140deg,rgba(34,211,238,.32),rgba(14,165,233,.16))}
+  .n3{background:linear-gradient(140deg,rgba(59,130,246,.36),rgba(37,99,235,.18))}
+  .n4{background:linear-gradient(140deg,rgba(139,92,246,.4),rgba(109,40,217,.2))}
+  .n5{background:linear-gradient(140deg,rgba(251,191,36,.42),rgba(245,158,11,.22));
+      box-shadow:0 0 26px rgba(251,191,36,.3)}
+  .nivel b{display:block;font-size:.94rem;font-weight:800}
+  .nivel em{font-style:normal;display:block;font-size:.7rem;color:#7DD3FC;font-weight:800;
+            letter-spacing:.08em;text-transform:uppercase;margin:4px 0 7px}
+  .nivel span{font-size:.76rem;color:var(--apagado);line-height:1.45}
+
+  /* ---------- principio ---------- */
+  .principio{position:relative;overflow:hidden;
+             background:linear-gradient(150deg,#0B1430,#141F4C 52%,#2A1B58)}
+  .principio::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(700px 400px at 78% 8%, rgba(34,211,238,.20), transparent 62%)}
+  .principio .env{position:relative;max-width:860px;text-align:center}
+  .aspas{font-size:clamp(1.5rem,3.3vw,2.15rem);font-weight:800;line-height:1.34;letter-spacing:-.02em}
+  .principio > .env > p:not(.olho){color:#C3CEE8;margin-top:26px;font-size:1.04rem}
+
+  /* ---------- prova tecnica ---------- */
+  .lista-prova{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:48px}
+  @media(max-width:820px){.lista-prova{grid-template-columns:1fr}}
+  .prova{display:flex;gap:14px;align-items:flex-start;background:var(--vidro);
+         border:1px solid var(--linha);border-radius:14px;padding:20px 22px;
+         transition:border-color .2s}
+  .prova:hover{border-color:var(--linha-forte)}
+  .check{flex:none;width:23px;height:23px;border-radius:50%;background:rgba(52,211,153,.16);
+         color:#6EE7B7;display:grid;place-items:center;font-size:.76rem;font-weight:800;margin-top:2px;
+         border:1px solid rgba(52,211,153,.3)}
+  .prova b{display:block;font-size:1rem;margin-bottom:4px}
+  .prova span{color:var(--texto);font-size:.92rem}
+
+  /* ---------- execucao ---------- */
+  .trilha{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:52px}
+  @media(max-width:940px){.trilha{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.trilha{grid-template-columns:1fr}}
+  .fase{background:var(--vidro);border:1px solid var(--linha);border-radius:16px;padding:24px 22px;
+        position:relative;transition:border-color .2s,transform .2s}
+  .fase:hover{transform:translateY(-4px);border-color:var(--linha-forte)}
+  .fase.viva{border-color:rgba(52,211,153,.35);
+             box-shadow:0 0 0 1px rgba(52,211,153,.12),0 20px 50px rgba(0,0,0,.4)}
+  .tag{display:inline-flex;align-items:center;gap:7px;font-size:.66rem;font-weight:800;
+       letter-spacing:.09em;text-transform:uppercase;padding:5px 11px;border-radius:999px;
+       margin-bottom:14px}
+  .tag-ok{background:rgba(52,211,153,.14);color:#6EE7B7;border:1px solid rgba(52,211,153,.3)}
+  .tag-agora{background:rgba(59,130,246,.14);color:#93C5FD;border:1px solid rgba(59,130,246,.3)}
+  .tag-prox{background:rgba(255,255,255,.05);color:#9DAAC9;border:1px solid var(--linha)}
+  .fase b{display:block;font-size:1.02rem;font-weight:800;margin-bottom:8px;letter-spacing:-.01em}
+  .fase p{color:var(--texto);font-size:.9rem}
+
+  /* ---------- investidores ---------- */
+  .painel{background:linear-gradient(155deg,rgba(59,130,246,.10),rgba(139,92,246,.08));
+          border:1px solid var(--linha-forte);border-radius:22px;padding:34px}
+  .painel h3{font-size:1.1rem;font-weight:800;margin-bottom:20px;letter-spacing:-.01em}
+  .linha-tese{padding:14px 0;border-top:1px solid var(--linha)}
+  .linha-tese:first-of-type{border-top:0;padding-top:0}
+  .linha-tese b{color:#93C5FD;font-weight:800;display:block;font-size:.74rem;
+                letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+  .linha-tese span{color:var(--texto);font-size:.96rem}
+
+  /* ---------- cta ---------- */
+  .cta{position:relative;overflow:hidden;text-align:center;
+       background:linear-gradient(145deg,#0B1430,#1B2A63 52%,#3A1D6E)}
+  .cta::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(600px 380px at 50% 0%, rgba(34,211,238,.20), transparent 66%)}
+  .cta .env{position:relative}
+  .cta > .env > p{color:#C3CEE8;max-width:38em;margin:18px auto 34px;font-size:1.05rem}
+  .cta .acoes{justify-content:center}
+
+  /* ---------- rodape ---------- */
+  footer{background:#05091A;color:#8090B4;padding:56px 0 44px;font-size:.92rem;
+         border-top:1px solid var(--linha)}
+  .rodape-logo{height:46px;width:auto;margin-bottom:28px;opacity:.9}
+  .rodape{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  .rodape a{color:#8090B4;text-decoration:none}
+  .rodape a:hover{color:#fff;text-decoration:underline}
+  .rodape-links{display:flex;gap:18px;flex-wrap:wrap}
+  .aviso{margin-top:32px;padding-top:26px;border-top:1px solid rgba(255,255,255,.07);
+         color:#65739A;font-size:.84rem;line-height:1.68}
+
+  :focus-visible{outline:3px solid var(--ciano);outline-offset:3px;border-radius:6px}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .linha-graf{stroke-dashoffset:0}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="env">
+    <a class="nav-logo" href="/">
+      <img src="/assets/logo-horizontal.png" alt="Essentius" width="471" height="120"/>
+    </a>
+    <div class="nav-links">
+      <a href="/">Para quem usa</a>
+      <a href="#plataforma">Plataforma</a>
+      <a href="#ecossistema">Ecossistema</a>
+      <a href="#rede">Rede</a>
+      <a href="#tecnologia">Tecnologia</a>
+      <a href="#mercado">Mercado</a>
+      <a href="#execucao">Execução</a>
+      <a href="/perguntas-frequentes/">Dúvidas</a>
+    </div>
+    <a class="btn btn-primario" href="/">Quero usar</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+  <div class="grade-fundo" aria-hidden="true"></div>
+  <div class="env">
+    <div>
+      <span class="selo"><span class="ponto"></span> Plataforma em produção · Brasil</span>
+      <h1>Todo diabético tem<br/>uma rotina inteira<br/><span class="marca">girando em volta dele.</span></h1>
+      <p class="chamada">
+        O Essentius coloca essa rotina em um só lugar: um agente de inteligência artificial
+        que entende os seus dados, um companheiro que evolui com o seu cuidado e uma rede
+        de saúde — farmácia, laboratório, oftalmologia, podologia, nutrição — conectada ao
+        seu dia a dia.
+      </p>
+      <div class="acoes">
+        <a class="btn btn-primario" href="/">Quero usar o Essentius</a>
+        <a class="btn btn-vidro" href="#ecossistema">Ver o ecossistema</a>
+      </div>
+      <p class="hero-nota">Gratuito no lançamento · <b>Quem chega no começo é Fundador para sempre</b></p>
+      <p class="hero-nota" style="margin-top:10px">Tem diabetes ou cuida de alguém que tem?
+        <a href="/" style="color:#93C5FD;font-weight:700">Veja o app pensado para você →</a></p>
+    </div>
+
+    <div class="palco">
+      <div class="halo" aria-hidden="true"></div>
+
+      <!-- aparelho de tras: conversa com o agente de IA -->
+      <div class="aparelho aparelho-tras" aria-hidden="true">
+        <div class="fone fone-p">
+          <div class="tela">
+            <div class="ilha"></div>
+            <div class="status">
+              <span>9:41</span>
+              <div>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="currentColor"><rect y="7" width="2.8" height="3" rx=".9"/><rect x="4.4" y="4.8" width="2.8" height="5.2" rx=".9"/><rect x="8.8" y="2.4" width="2.8" height="7.6" rx=".9"/><rect x="13.2" width="2.8" height="10" rx=".9"/></svg>
+                <svg width="23" height="10" viewBox="0 0 23 10"><rect x=".5" y=".5" width="19" height="9" rx="2.8" fill="none" stroke="currentColor" stroke-opacity=".45"/><rect x="2" y="2" width="16" height="6" rx="1.6" fill="currentColor"/><path d="M21 3.4v3.2a1.8 1.8 0 0 0 0-3.2Z" fill="currentColor" fill-opacity=".45"/></svg>
+              </div>
+            </div>
+
+            <div class="cenas">
+            <!-- 1 · conversa com o agente -->
+            <div class="cena">
+              <div class="chat-topo">
+                <div class="essi-orb" style="width:28px;height:28px"></div>
+                <div class="chat-nome">
+                  <b>Essi</b>
+                  <span><span class="ponto" style="width:5px;height:5px"></span> agente Essentius</span>
+                </div>
+              </div>
+              <div class="msg msg-eu">Comi pizza no jantar. De quanto em quanto tempo devo medir?</div>
+              <div class="msg msg-ia">
+                Pizza tem bastante gordura, então a glicemia costuma subir mais devagar e ficar
+                alta por mais tempo. Vale uma medida 2h depois e outra por volta das 4h.
+                <span class="msg-fonte">ADA · SBD</span>
+              </div>
+              <div class="msg msg-eu">E se estiver alta na segunda?</div>
+              <div class="digitando"><i></i><i></i><i></i></div>
+            </div>
+
+            <!-- 2 · comunidade -->
+            <div class="cena">
+              <div class="tit-cena"><b>Comunidade</b><span>grupo DM2</span></div>
+              <div class="bloco">
+                <p style="font-size:.63rem;font-weight:700;line-height:1.45">
+                  Alguém mais fica com muito sono depois do almoço?</p>
+                <span class="chip chip-in" style="margin-top:7px">12 respostas</span>
+              </div>
+              <div class="bloco">
+                <div style="display:flex;align-items:center;gap:7px;margin-bottom:6px">
+                  <span class="essi-orb" style="width:20px;height:20px;
+                        background:radial-gradient(circle at 34% 28%,#FDE68A,#F59E0B 45%,#B45309)"
+                        aria-hidden="true"></span>
+                  <div style="flex:1;min-width:0">
+                    <b style="font-size:.58rem;display:block">Roberto</b>
+                    <span style="font-size:.5rem;color:#FCD34D;font-weight:800">MENTOR · DM1 há 30 anos</span>
+                  </div>
+                </div>
+                <p style="font-size:.58rem;line-height:1.5;color:#D7E0F4">
+                  Comigo era o arroz branco. Troquei metade por feijão e legumes e o sono
+                  praticamente sumiu. Vale medir 2h depois pra ver o seu caso.</p>
+                <span class="chip chip-ok" style="margin-top:7px">24 acharam útil</span>
+              </div>
+              <p style="font-size:.53rem;color:#8FA0C4;font-weight:600;margin-top:9px">
+                Rede privada e moderada. Só quem convive com diabetes.</p>
+            </div>
+
+            <!-- 3 · loja de beneficios -->
+            <div class="cena">
+              <div class="tit-cena"><b>Seus EssCoins</b><span>saldo</span></div>
+              <div class="bloco" style="text-align:center;padding:13px 12px">
+                <div class="grande" style="color:#FCD34D">2.450</div>
+                <span class="chip chip-am" style="margin-top:5px">ganhos se cuidando</span>
+              </div>
+              <div style="margin-top:8px">
+                <div class="item">
+                  <span class="item-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="7.5" width="19" height="9" rx="4.5" transform="rotate(-45 12 12)"/><path d="M8.5 8.5 15.5 15.5"/></svg></span>
+                  <div class="item-tx"><b>Farmácia</b><span>20% em tiras e lancetas</span></div>
+                  <span class="item-vl" style="color:#FCD34D">800</span>
+                </div>
+                <div class="item">
+                  <span class="item-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6.5L4.6 17A2.6 2.6 0 0 0 6.9 21h10.2a2.6 2.6 0 0 0 2.3-4L15 9.5V3"/><path d="M8 3h8"/></svg></span>
+                  <div class="item-tx"><b>Laboratório</b><span>hemoglobina glicada</span></div>
+                  <span class="item-vl" style="color:#FCD34D">1.200</span>
+                </div>
+                <div class="item">
+                  <span class="item-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20c0-7 3-11 9-12 0 8-3.5 12-9 12Z"/><path d="M11 20c0-5-2.5-8-7-8.5C4 17 7 20 11 20Z"/></svg></span>
+                  <div class="item-tx"><b>Nutricionista</b><span>consulta parceira</span></div>
+                  <span class="item-vl" style="color:#FCD34D">2.000</span>
+                </div>
+              </div>
+              <p style="font-size:.52rem;color:#8FA0C4;font-weight:600;margin-top:9px;line-height:1.5">
+                EssCoins não se compram com dinheiro. Quem paga o benefício é o parceiro.</p>
+            </div>
+
+            <!-- 4 · mundo do essi -->
+            <div class="cena">
+              <div class="tit-cena"><b>Seu mundo</b><span>nível 12</span></div>
+              <div class="bloco" style="text-align:center;padding:14px 12px">
+                <span class="essi-orb" style="width:52px;height:52px;margin:0 auto 9px" aria-hidden="true"></span>
+                <b style="display:block;font-size:.72rem">Essi · Focado</b>
+                <span style="font-size:.53rem;color:#8FA0C4;font-weight:700">faltam 340 pontos para o nível 13</span>
+                <div class="essi-xp" style="margin-top:8px"><i></i></div>
+              </div>
+              <div class="conquistas">
+                <div class="conq"><b style="color:#FB923C">27</b><span>DIAS SEGUIDOS</span></div>
+                <div class="conq"><b style="color:#FCD34D">2.450</b><span>ESSCOINS</span></div>
+                <div class="conq"><b style="color:#6EE7B7">87%</b><span>DA META</span></div>
+              </div>
+              <div class="item" style="margin-top:8px">
+                <span class="item-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M6 4h12v5a6 6 0 0 1-12 0Z"/><path d="M18 5h3v2a3 3 0 0 1-3 3M6 5H3v2a3 3 0 0 0 3 3"/></svg></span>
+                <div class="item-tx"><b>Novo ambiente</b><span>laboratório desbloqueado</span></div>
+              </div>
+            </div>
+
+            <!-- 5 · alerta e familia -->
+            <div class="cena">
+              <div class="tit-cena"><b>Alerta</b><span>há 4 minutos</span></div>
+              <div class="alerta">
+                <span class="chip" style="background:rgba(248,113,113,.28);color:#FCA5A5">HIPOGLICEMIA</span>
+                <div class="grande" style="margin-top:6px">58<small style="color:#FCA5A5">mg/dL</small></div>
+                <p style="font-size:.58rem;line-height:1.5;color:#F5D7D7;margin-top:5px">
+                  Tome 15 g de carboidrato de absorção rápida e meça de novo em 15 minutos.</p>
+              </div>
+              <div class="item" style="margin-top:8px">
+                <span class="item-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div class="item-tx"><b>Maria foi avisada</b><span>perfil família</span></div>
+              </div>
+              <div class="item">
+                <span class="item-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-7-10a7 7 0 0 1 14 0c0 5.4-7 10-7 10Z"/><path d="M12 6v6M9 9h6"/></svg></span>
+                <div class="item-tx"><b>Emergência</b><span>ligar 192</span></div>
+              </div>
+              <p style="font-size:.52rem;color:#8FA0C4;font-weight:600;margin-top:9px;line-height:1.5">
+                Segurança nunca fica atrás de assinatura. Alerta é grátis, sempre.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="balao balao-1">
+        <b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s4 4.4 4 8a4 4 0 0 1-8 0c0-1 .3-1.8.6-2.5C7 9 6 11 6 13.5a6 6 0 0 0 12 0C18 8.6 12 2 12 2Z"/></svg> 27 dias</b>
+        <span>de cuidado seguido</span>
+      </div>
+
+      <!-- aparelho da frente: painel do dia -->
+      <div class="aparelho aparelho-frente">
+        <div class="fone fone-g" role="img" aria-label="Tela do aplicativo Essentius: glicemia atual de 142 mg/dL com a curva do dia, os três anéis de cuidado do dia e o companheiro Essi reagindo aos registros">
+          <div class="tela">
+            <div class="ilha"></div>
+            <div class="status">
+              <span>9:41</span>
+              <div>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="currentColor"><rect y="7" width="2.8" height="3" rx=".9"/><rect x="4.4" y="4.8" width="2.8" height="5.2" rx=".9"/><rect x="8.8" y="2.4" width="2.8" height="7.6" rx=".9"/><rect x="13.2" width="2.8" height="10" rx=".9"/></svg>
+                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 3.5a8.6 8.6 0 0 1 12 0"/><path d="M3.4 6a5.4 5.4 0 0 1 7.2 0"/><path d="M5.8 8.4a2.1 2.1 0 0 1 2.4 0"/></svg>
+                <svg width="23" height="10" viewBox="0 0 23 10"><rect x=".5" y=".5" width="19" height="9" rx="2.8" fill="none" stroke="currentColor" stroke-opacity=".45"/><rect x="2" y="2" width="16" height="6" rx="1.6" fill="currentColor"/><path d="M21 3.4v3.2a1.8 1.8 0 0 0 0-3.2Z" fill="currentColor" fill-opacity=".45"/></svg>
+              </div>
+            </div>
+
+            <div class="app-topo">
+              <div class="app-marca">
+                <img src="/assets/marca.png" alt="" width="201" height="141" style="height:19px;width:auto"/>
+                <span>Essentius</span>
+              </div>
+              <span class="app-sino"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
+            </div>
+
+            <div class="cenas">
+            <!-- 1 · painel do dia -->
+            <div class="cena">
+            <div class="app-saud">Olá, Gildo 👋</div>
+            <div class="app-sub">Vamos juntos cuidar da sua saúde hoje?</div>
+
+            <div class="cartao-glic">
+              <div class="glic-topo">
+                <span class="glic-rot">Glicemia atual</span>
+                <span class="glic-selo">NO ALVO</span>
+              </div>
+              <div class="glic-val"><span class="glic-num">142</span><span class="glic-un">mg/dL</span></div>
+              <div class="glic-tend">↗ Estável nas últimas 3 horas</div>
+              <svg class="grafico" viewBox="0 0 240 60" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="gradLinha" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#22D3EE"/>
+                    <stop offset="55%" stop-color="#60A5FA"/>
+                    <stop offset="100%" stop-color="#C4B5FD"/>
+                  </linearGradient>
+                  <linearGradient id="gradArea" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#3B82F6" stop-opacity=".42"/>
+                    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="gradFaixa" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#34D399" stop-opacity=".15"/>
+                    <stop offset="100%" stop-color="#34D399" stop-opacity=".03"/>
+                  </linearGradient>
+                </defs>
+                <rect x="0" y="16" width="240" height="27" fill="url(#gradFaixa)"/>
+                <path class="area-graf" d="M4,44 L28,37 L52,41 L76,25 L100,31 L124,20 L148,28 L172,15 L196,26 L232,22 L232,60 L4,60 Z"/>
+                <path class="linha-graf" d="M4,44 L28,37 L52,41 L76,25 L100,31 L124,20 L148,28 L172,15 L196,26 L232,22"/>
+                <circle class="ponta-halo" cx="232" cy="22" r="7"/>
+                <circle class="ponta" cx="232" cy="22" r="3.4"/>
+              </svg>
+            </div>
+
+            <div class="aneis">
+              <div class="anel-cx">
+                <svg width="40" height="40" viewBox="0 0 42 42" aria-hidden="true">
+                  <circle class="anel-tr" cx="21" cy="21" r="17"/>
+                  <circle class="anel-pr" cx="21" cy="21" r="17" pathLength="100" stroke="#34D399" style="--fim:0"/>
+                </svg>
+                <b>Medir</b><span>2 de 2</span>
+              </div>
+              <div class="anel-cx">
+                <svg width="40" height="40" viewBox="0 0 42 42" aria-hidden="true">
+                  <circle class="anel-tr" cx="21" cy="21" r="17"/>
+                  <circle class="anel-pr" cx="21" cy="21" r="17" pathLength="100" stroke="#22D3EE" style="--fim:0;animation-delay:.85s"/>
+                </svg>
+                <b>Alimentar</b><span>3 de 3</span>
+              </div>
+              <div class="anel-cx">
+                <svg width="40" height="40" viewBox="0 0 42 42" aria-hidden="true">
+                  <circle class="anel-tr" cx="21" cy="21" r="17"/>
+                  <circle class="anel-pr" cx="21" cy="21" r="17" pathLength="100" stroke="#FBBF24" style="--fim:40;animation-delay:1s"/>
+                </svg>
+                <b>Mover</b><span>18/30 min</span>
+              </div>
+            </div>
+
+            <div class="cartao-essi">
+              <div class="essi-orb" aria-hidden="true"></div>
+              <div class="essi-txt">
+                <b>Essi está animado!</b>
+                <span>Nível 12 · faltam 340 pontos</span>
+                <div class="essi-xp"><i></i></div>
+              </div>
+              <span class="essi-coins">+45</span>
+            </div>
+            </div>
+
+            <!-- 2 · refeicao por foto -->
+            <div class="cena">
+              <div class="tit-cena"><b>Refeição analisada</b><span>agora há pouco</span></div>
+              <div class="foto-prato">
+                <img src="/assets/img1.jpg" alt="" width="512" height="512" loading="lazy"/>
+                <span class="chip">Confiança 87%</span>
+              </div>
+              <div class="bloco" style="margin-top:9px">
+                <div class="glic-rot">Carboidratos estimados</div>
+                <div class="grande">42 g<small>no prato</small></div>
+                <div class="barra"><i style="width:58%;background:linear-gradient(90deg,#22D3EE,#60A5FA)"></i></div>
+              </div>
+              <div style="margin-top:8px">
+                <div class="item"><span class="pt-cor" style="background:#60A5FA"></span>
+                  <div class="item-tx"><b>Grão-de-bico</b><span>1 concha</span></div><span class="item-vl">28 g</span></div>
+                <div class="item"><span class="pt-cor" style="background:#34D399"></span>
+                  <div class="item-tx"><b>Folhas, tomate e pepino</b><span>1 prato</span></div><span class="item-vl">6 g</span></div>
+                <div class="item"><span class="pt-cor" style="background:#A78BFA"></span>
+                  <div class="item-tx"><b>Grãos e sementes</b><span>2 colheres</span></div><span class="item-vl">8 g</span></div>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px">
+                <span class="chip chip-in">Você confirma ou ajusta</span>
+                <span class="essi-coins">+15 EssCoins</span>
+              </div>
+            </div>
+
+            <!-- 3 · exame interpretado -->
+            <div class="cena">
+              <div class="tit-cena"><b>Exame interpretado</b><span>há 2 dias</span></div>
+              <div class="bloco">
+                <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:8px">
+                  <div>
+                    <div class="glic-rot">Hemoglobina glicada</div>
+                    <div class="grande">7,2<small>%</small></div>
+                  </div>
+                  <span class="chip chip-ok">↓ 0,9 desde março</span>
+                </div>
+                <div class="barra"><i style="width:46%;background:linear-gradient(90deg,#34D399,#FBBF24)"></i></div>
+                <div class="escala"><span>6%</span><span>alvo &lt; 7%</span><span>10%</span></div>
+              </div>
+              <div class="bloco">
+                <div class="fala">
+                  <span class="essi-orb" style="width:22px;height:22px" aria-hidden="true"></span>
+                  <p>Caiu 0,9 ponto em quatro meses. Esse exame reflete os últimos três meses
+                     inteiros, não só a última semana — vale levar essa comparação na consulta.</p>
+                </div>
+              </div>
+              <div class="item" style="margin-top:8px">
+                <span class="item-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
+                <div class="item-tx"><b>Resumo para a consulta</b><span>exames, tendências e hábitos</span></div>
+                <span class="chip chip-ok">Pronto</span>
+              </div>
+            </div>
+
+            <!-- 4 · tendencias -->
+            <div class="cena">
+              <div class="tit-cena"><b>Últimos 14 dias</b><span>relatório</span></div>
+              <div class="bloco">
+                <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:8px">
+                  <div>
+                    <div class="glic-rot">Tempo no alvo</div>
+                    <div class="grande">68<small>%</small></div>
+                  </div>
+                  <span class="chip chip-ok">↑ 6 pontos</span>
+                </div>
+                <svg width="100%" height="46" viewBox="0 0 200 46" preserveAspectRatio="none"
+                     style="margin-top:9px;display:block" aria-hidden="true">
+                  <g fill="#60A5FA">
+                    <rect x="1" y="20" width="9" height="26" rx="3" fill-opacity=".55"/>
+                    <rect x="15" y="26" width="9" height="20" rx="3" fill-opacity=".55"/>
+                    <rect x="29" y="14" width="9" height="32" rx="3" fill-opacity=".7"/>
+                    <rect x="43" y="24" width="9" height="22" rx="3" fill-opacity=".55"/>
+                    <rect x="57" y="18" width="9" height="28" rx="3" fill-opacity=".65"/>
+                    <rect x="71" y="10" width="9" height="36" rx="3" fill-opacity=".8"/>
+                    <rect x="85" y="22" width="9" height="24" rx="3" fill-opacity=".55"/>
+                    <rect x="99" y="16" width="9" height="30" rx="3" fill-opacity=".68"/>
+                    <rect x="113" y="8" width="9" height="38" rx="3" fill-opacity=".85"/>
+                    <rect x="127" y="19" width="9" height="27" rx="3" fill-opacity=".6"/>
+                    <rect x="141" y="12" width="9" height="34" rx="3" fill-opacity=".75"/>
+                    <rect x="155" y="6" width="9" height="40" rx="3" fill-opacity=".9"/>
+                    <rect x="169" y="15" width="9" height="31" rx="3" fill-opacity=".7"/>
+                    <rect x="183" y="4" width="9" height="42" rx="3" fill="#22D3EE"/>
+                  </g>
+                </svg>
+              </div>
+              <div style="margin-top:8px">
+                <div class="item"><span class="pt-cor" style="background:#60A5FA"></span>
+                  <div class="item-tx"><b>Glicemia média</b></div><span class="item-vl">138 mg/dL</span></div>
+                <div class="item"><span class="pt-cor" style="background:#F87171"></span>
+                  <div class="item-tx"><b>Hipoglicemias</b></div><span class="item-vl">2</span></div>
+                <div class="item"><span class="pt-cor" style="background:#FBBF24"></span>
+                  <div class="item-tx"><b>Variabilidade</b></div><span class="item-vl">31%</span></div>
+              </div>
+            </div>
+
+            <!-- 5 · dispositivos -->
+            <div class="cena">
+              <div class="tit-cena"><b>Tudo integrado</b><span>4 conectados</span></div>
+              <div class="item">
+                <span class="item-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4.5 8.5a10 10 0 0 1 15 0"/><path d="M7.5 12a6 6 0 0 1 9 0"/><circle cx="12" cy="16.5" r="1.6" fill="currentColor" stroke="none"/></svg></span>
+                <div class="item-tx"><b>Sensor de glicemia</b><span>atualizado há 3 min</span></div>
+                <span class="chip chip-ok">Ativo</span>
+              </div>
+              <div class="item">
+                <span class="item-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6V3h6v3M9 18v3h6v-3"/><path d="M12 10v2.5l1.8 1"/></svg></span>
+                <div class="item-tx"><b>Relógio</b><span>8.240 passos hoje</span></div>
+                <span class="item-vl" style="color:#6EE7B7">+20</span>
+              </div>
+              <div class="item">
+                <span class="item-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M8 12h8"/><path d="M12 9v6"/></svg></span>
+                <div class="item-tx"><b>Balança</b><span>78,4 kg · terça</span></div>
+                <span class="item-vl" style="color:#6EE7B7">−0,6</span>
+              </div>
+              <div class="item">
+                <span class="item-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 3 10 2.5-6 1.5 3h5"/></svg></span>
+                <div class="item-tx"><b>Medidor de ponta de dedo</b><span>2 leituras hoje</span></div>
+                <span class="chip chip-in">Pareado</span>
+              </div>
+              <p style="font-size:.55rem;color:#8FA0C4;font-weight:600;margin-top:10px;line-height:1.5">
+                O dado já existe. O trabalho do Essentius é ler o que existe — não pedir que
+                você digite tudo de novo.
+              </p>
+            </div>
+            </div>
+
+            <div class="app-nav">
+              <span class="ativo"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.4 12 3l9 7.4"/><path d="M5.6 9.4V21h12.8V9.4"/></svg>Início</span>
+              <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 20V11"/><path d="M10 20V4"/><path d="M16 20v-6"/><path d="M21 20H3"/></svg>Relatórios</span>
+              <span class="fab" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+              <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.6a8 8 0 0 1-11.5 7.2L3 21l2.2-6.4A8 8 0 1 1 21 11.6Z"/></svg>Conversar</span>
+              <span><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.9"/><circle cx="12" cy="12" r="1.9"/><circle cx="19" cy="12" r="1.9"/></svg>Mais</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="balao balao-2">
+        <b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7DD3FC" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg> Rede de cuidado</b>
+        <span>parceiros perto de você</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="numeros listra">
+  <div class="env">
+    <div class="numeros-grade">
+      <div class="num-cx">
+        <div class="num marca">16,6 mi</div>
+        <div class="num-txt">de brasileiros adultos vivem com diabetes — 10,7% da população</div>
+      </div>
+      <div class="num-cx">
+        <div class="num marca">31,9%</div>
+        <div class="num-txt">não sabem que têm. Quase um terço sem diagnóstico</div>
+      </div>
+      <div class="num-cx">
+        <div class="num marca">3º</div>
+        <div class="num-txt">país que mais gasta com diabetes no mundo</div>
+      </div>
+      <div class="num-cx">
+        <div class="num marca">365</div>
+        <div class="num-txt">dias por ano de decisões — diabetes é a condição que nunca dá alta</div>
+      </div>
+    </div>
+    <p class="fonte">
+      Fonte: <a href="https://diabetesatlas.org/" rel="noopener">IDF Diabetes Atlas</a>,
+      11ª edição (2025), e dados da Federação Internacional de Diabetes sobre gasto em saúde.
+    </p>
+  </div>
+</section>
+
+<section id="plataforma">
+  <div class="env">
+    <p class="olho">A plataforma</p>
+    <h2 class="titulo">Não é um app de registro.<br/>É a camada que organiza o cuidado inteiro.</h2>
+    <p class="sub">
+      A maioria dos aplicativos de diabetes é planilha com outro nome: recebe número e devolve
+      número. O Essentius fecha o ciclo — captura o dado sem esforço, explica o que ele significa,
+      sustenta a motivação e conecta a pessoa a quem pode ajudar.
+    </p>
+
+    <div class="grade-3">
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">🧠</div>
+        <h3>Agente de IA especializado</h3>
+        <p>
+          Fundamentado nas diretrizes ADA, SBD e EASD. Recebe o contexto clínico da pessoa —
+          perfil, faixa alvo, últimas medições, exames — e responde em linguagem de gente.
+          Nunca prescreve, nunca diagnostica, nunca calcula dose.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">📷</div>
+        <h3>Foto do prato, carboidrato estimado</h3>
+        <p>
+          O motivo número um para largar um app de diabetes é o trabalho de alimentá-lo.
+          A meta de projeto é <strong>dois toques</strong> por registro — e a refeição se
+          resolve com uma foto, com a confiança da estimativa sempre visível.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">🔬</div>
+        <h3>Exame que vira conversa</h3>
+        <p>
+          Hemoglobina glicada, lipidograma, função renal. O Essentius lê o laudo, compara com o
+          histórico e explica o que mudou — em vez de devolver mais um PDF cheio de siglas que
+          ninguém traduz.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">📡</div>
+        <h3>Sensores e dispositivos</h3>
+        <p>
+          Sensor de glicemia contínua, relógio, balança, medidor. O dado já existe e já é gerado
+          centenas de vezes por semana: o trabalho da plataforma é ler o que existe, não pedir
+          que a pessoa digite tudo de novo.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">✨</div>
+        <h3>O Essi, que vive do seu cuidado</h3>
+        <p>
+          Uma espécie própria, criada para o Essentius e registrável como propriedade intelectual.
+          Ele ganha energia quando a pessoa se cuida, e o mundo dele evolui junto — nível 1 ao
+          Mestre, com itens, ambientes e conquistas que se acumulam.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">🤝</div>
+        <h3>Comunidade e mentoria</h3>
+        <p>
+          Rede privada, moderada, com mentoria de quem convive com diabetes há anos. Porque a
+          parte mais dura raramente é técnica — é não se sentir sozinho às três da manhã.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="listra" id="ecossistema">
+  <div class="env centro">
+    <p class="olho">O ecossistema</p>
+    <h2 class="titulo">Diabetes não é uma consulta.<br/>É uma rede inteira de cuidado.</h2>
+    <p class="sub">
+      Quem vive com diabetes não precisa só de endocrinologista. Precisa de oftalmologista todo
+      ano, de podólogo, de nutricionista, de laboratório, de farmácia toda semana, de atividade
+      física. Hoje essa rede é fragmentada e a pessoa navega sozinha.
+      <strong style="color:#EEF3FF">O Essentius é o ponto onde ela se encontra</strong> —
+      e o Essentius sabe onde a pessoa está, o que ela precisa e quando.
+    </p>
+  </div>
+
+  <div class="env">
+    <div class="orbita" aria-hidden="true">
+      <svg class="orbita-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <circle class="anel anel-gira" cx="50" cy="50" r="42"/>
+        <circle class="anel" cx="50" cy="50" r="27"/>
+        <g class="raio">
+          <line x1="50" y1="50" x2="50" y2="8"/>
+          <line x1="50" y1="50" x2="79.7" y2="20.3"/>
+          <line x1="50" y1="50" x2="92" y2="50"/>
+          <line x1="50" y1="50" x2="79.7" y2="79.7"/>
+          <line x1="50" y1="50" x2="50" y2="92"/>
+          <line x1="50" y1="50" x2="20.3" y2="79.7"/>
+          <line x1="50" y1="50" x2="8" y2="50"/>
+          <line x1="50" y1="50" x2="20.3" y2="20.3"/>
+        </g>
+      </svg>
+
+      <div class="nucleo">
+        <div>
+          <img src="/assets/marca.png" alt="" width="201" height="141"/>
+          <b class="marca">Essentius</b>
+          <span>a rotina, o dado e o contexto de cada pessoa</span>
+        </div>
+      </div>
+
+      <div class="no" style="left:50%;top:8%"><i>💊</i><b>Farmácias</b><span>insumo e recompra</span></div>
+      <div class="no" style="left:79.7%;top:20.3%"><i>🔬</i><b>Laboratórios</b><span>exames de rotina</span></div>
+      <div class="no" style="left:92%;top:50%"><i>👁️</i><b>Oftalmologia</b><span>retinopatia</span></div>
+      <div class="no" style="left:79.7%;top:79.7%"><i>🦶</i><b>Podologia</b><span>pé diabético</span></div>
+      <div class="no" style="left:50%;top:92%"><i>🥗</i><b>Nutrição</b><span>plano alimentar</span></div>
+      <div class="no" style="left:20.3%;top:79.7%"><i>🏃</i><b>Atividade física</b><span>academias e clubes</span></div>
+      <div class="no" style="left:8%;top:50%"><i>🩺</i><b>Clínicas</b><span>endócrino e nefro</span></div>
+      <div class="no" style="left:20.3%;top:20.3%"><i>📡</i><b>Sensores</b><span>CGM e wearables</span></div>
+    </div>
+
+    <div class="orbita-lista">
+      <div><i>💊</i><b>Farmácias</b><span>insumo e recompra</span></div>
+      <div><i>🔬</i><b>Laboratórios</b><span>exames de rotina</span></div>
+      <div><i>👁️</i><b>Oftalmologia</b><span>retinopatia</span></div>
+      <div><i>🦶</i><b>Podologia</b><span>pé diabético</span></div>
+      <div><i>🥗</i><b>Nutrição</b><span>plano alimentar</span></div>
+      <div><i>🏃</i><b>Atividade física</b><span>academias e clubes</span></div>
+      <div><i>🩺</i><b>Clínicas</b><span>endócrino e nefro</span></div>
+      <div><i>📡</i><b>Sensores</b><span>CGM e wearables</span></div>
+    </div>
+
+    <div class="grade-3">
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">📍</div>
+        <h3>Relevância por região</h3>
+        <p>
+          A rede de cuidado é local por natureza: a farmácia é a da esquina, o laboratório é o do
+          bairro, o podólogo é o que atende na cidade. A plataforma foi desenhada para conectar
+          cada pessoa a quem realmente pode atendê-la — perto dela.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">🎯</div>
+        <h3>Contexto, não anúncio</h3>
+        <p>
+          Quem está há doze meses sem exame de fundo de olho tem uma necessidade concreta.
+          Quem acabou de registrar o último sensor tem outra. O ecossistema responde à rotina
+          real da pessoa — e é isso que o torna valioso para os dois lados.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">💰</div>
+        <h3>Quem paga é o parceiro</h3>
+        <p>
+          O usuário alcança benefícios com EssCoins, a moeda que ele ganha se cuidando e que
+          <strong>não se compra com dinheiro</strong>. O parceiro paga pelo cliente qualificado
+          que chega. A pessoa nunca é espremida — e o dado individual de saúde nunca é o produto.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="rede">
+  <div class="env centro">
+    <p class="olho">O tamanho da rede</p>
+    <h2 class="titulo">Cada pessoa com diabetes é uma rotina<br/>inteira de consumo recorrente</h2>
+    <p class="sub">
+      Não é audiência genérica. É gente com necessidade concreta, com data marcada pela
+      diretriz clínica, todo ano, pelo resto da vida. Hoje ninguém organiza esse encontro:
+      o paciente procura sozinho e o prestador anuncia no escuro.
+    </p>
+  </div>
+
+  <div class="env">
+    <div class="rede">
+      <div class="lado">
+        <p class="lado-rot">Quem precisa</p>
+        <h3>16,6 milhões de brasileiros</h3>
+        <ul>
+          <li><span class="marcador"></span><span><b>Uma condição que não tira férias.</b> Decisão várias vezes ao dia, todos os dias.</span></li>
+          <li><span class="marcador"></span><span><b>Necessidades previsíveis.</b> Exame, consulta, insumo e acompanhamento têm frequência definida por diretriz.</span></li>
+          <li><span class="marcador"></span><span><b>Rede fragmentada.</b> Cada especialidade num lugar, sem ninguém costurando.</span></li>
+          <li><span class="marcador"></span><span><b>Abrem o app todo dia.</b> Porque o cuidado é diário — e é isso que cria o encontro.</span></li>
+          <li><span class="marcador"></span><span><b>O custo mora na complicação.</b> Rim, visão e coração são as contas mais caras do sistema — e as mais evitáveis com acompanhamento.</span></li>
+          <li><span class="marcador"></span><span><b>Ninguém troca de trilho.</b> Quem organiza esse cuidado fica com o hábito diário e com o histórico inteiro.</span></li>
+        </ul>
+      </div>
+
+      <div class="meio" aria-hidden="true">
+        <span class="seta">→</span>
+        <img src="/assets/marca.png" alt="" width="201" height="141"/>
+        <div class="meio-nome marca">Essentius</div>
+        <p class="meio-txt">o único lugar onde os dois lados se encontram todo dia</p>
+        <span class="seta">←</span>
+      </div>
+
+      <div class="lado">
+        <p class="lado-rot">Quem quer alcançar</p>
+        <h3>Uma cadeia inteira de saúde</h3>
+        <ul>
+          <li><span class="marcador"></span><span><b>Farmácias e drogarias</b> — insumo e medicação de recompra mensal</span></li>
+          <li><span class="marcador"></span><span><b>Laboratórios</b> — exames de acompanhamento várias vezes ao ano</span></li>
+          <li><span class="marcador"></span><span><b>Consultórios e clínicas</b> — endocrinologia, nefrologia, cardiologia</span></li>
+          <li><span class="marcador"></span><span><b>Oftalmologia e podologia</b> — as duas complicações mais caras e mais evitáveis</span></li>
+          <li><span class="marcador"></span><span><b>Nutrição e atividade física</b> — acompanhamento contínuo</span></li>
+          <li><span class="marcador"></span><span><b>Planos de saúde e operadoras</b> — que pagam a conta da complicação</span></li>
+          <li><span class="marcador"></span><span><b>Empresas e empregadores</b> — saúde da população que sustenta o negócio</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tabela">
+      <div class="tab-l"><span>O que cada pessoa precisa, todo ano</span><span>Frequência</span></div>
+      <div class="tab-l">
+        <div><b>Insumo e medicação</b><em>farmácia</em></div>
+        <span class="tab-freq">~12× ao ano</span>
+      </div>
+      <div class="tab-l">
+        <div><b>Hemoglobina glicada e exames de rotina</b><em>laboratório</em></div>
+        <span class="tab-freq">3 a 4× ao ano</span>
+      </div>
+      <div class="tab-l">
+        <div><b>Consulta de acompanhamento</b><em>endocrinologia ou clínica médica</em></div>
+        <span class="tab-freq">2 a 4× ao ano</span>
+      </div>
+      <div class="tab-l">
+        <div><b>Exame de fundo de olho</b><em>oftalmologia</em></div>
+        <span class="tab-freq">1× ao ano</span>
+      </div>
+      <div class="tab-l">
+        <div><b>Avaliação dos pés</b><em>podologia</em></div>
+        <span class="tab-freq">1× ao ano</span>
+      </div>
+      <div class="tab-l">
+        <div><b>Orientação alimentar</b><em>nutrição</em></div>
+        <span class="tab-freq">2× ao ano</span>
+      </div>
+      <div class="tab-l">
+        <div><b>Atividade física orientada</b><em>academia, clube, profissional</em></div>
+        <span class="tab-freq">contínuo</span>
+      </div>
+    </div>
+
+    <div class="soma">
+      <div class="soma-num marca">+ de 300 milhões</div>
+      <p>
+        de encontros de cuidado por ano, só no Brasil — mais de 20 por pessoa, multiplicados
+        por 16,6 milhões de pessoas. Cada um deles é uma compra, um exame ou uma consulta que
+        <strong style="color:var(--tinta)">vai acontecer de qualquer jeito</strong>. Hoje sem
+        nenhuma camada que os organize, e sem ninguém sabendo a hora certa de aparecer.
+      </p>
+      <small>
+        Modelo ilustrativo. Frequências conforme as recomendações de acompanhamento do diabetes
+        (ADA e SBD); base populacional do IDF Diabetes Atlas, 11ª edição (2025).
+      </small>
+    </div>
+  </div>
+
+  <div class="env centro" style="margin-top:88px">
+    <p class="olho">O ciclo</p>
+    <h2 class="titulo">Uma roda que gira mais rápido a cada volta</h2>
+    <p class="sub">
+      É por isso que a posição vale mais do que o produto: cada lado da rede torna o outro
+      lado mais valioso, e quem chega primeiro fica com os dois.
+    </p>
+  </div>
+
+  <div class="env">
+    <div class="ciclo">
+      <div class="passo">
+        <div class="passo-n">1</div>
+        <b>Mais gente cuidando</b>
+        <p>O app é aberto todo dia porque o cuidado é diário. Isso gera contexto: o que a pessoa precisa e quando.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-n">2</div>
+        <b>O parceiro acerta a hora</b>
+        <p>Em vez de anunciar no escuro, o prestador chega em quem tem a necessidade concreta agora — e paga só por isso.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-n">3</div>
+        <b>O benefício melhora</b>
+        <p>Mais parceiros disputando o mesmo usuário significa desconto maior, consulta mais barata, exame mais acessível.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-n">4</div>
+        <b>Mais gente entra e fica</b>
+        <p>Cuidar passa a valer a pena também no bolso. E a roda recomeça, com mais gente dentro do que na volta anterior.</p>
+      </div>
+    </div>
+    <p class="ciclo-nota">
+      Efeito de rede dos dois lados, montado em cima de um hábito diário — e não de uma compra avulsa.
+    </p>
+  </div>
+</section>
+
+<section class="listra">
+  <div class="env centro">
+    <p class="olho">A jornada</p>
+    <h2 class="titulo">O mundo do Essi evolui junto com a pessoa</h2>
+    <p class="sub">
+      Cada nível desbloqueia itens, ambientes e benefícios reais. Não é enfeite: é a estrutura
+      que transforma uma obrigação clínica diária em algo que a pessoa <em>quer</em> abrir.
+    </p>
+    <div class="niveis">
+      <div class="nivel">
+        <div class="aura n1" aria-hidden="true">🌱</div>
+        <b>Iniciante</b><em>Nível 1</em>
+        <span>Começando a jornada</span>
+      </div>
+      <div class="nivel">
+        <div class="aura n2" aria-hidden="true">💧</div>
+        <b>Em evolução</b><em>Nível 5</em>
+        <span>Mantendo os hábitos</span>
+      </div>
+      <div class="nivel">
+        <div class="aura n3" aria-hidden="true">🎯</div>
+        <b>Focado</b><em>Nível 15</em>
+        <span>Construindo disciplina</span>
+      </div>
+      <div class="nivel">
+        <div class="aura n4" aria-hidden="true">🚀</div>
+        <b>Avançado</b><em>Nível 30</em>
+        <span>Excelentes escolhas</span>
+      </div>
+      <div class="nivel">
+        <div class="aura n5" aria-hidden="true">👑</div>
+        <b>Mestre</b><em>Nível 50+</em>
+        <span>Inspiração para os demais e mentor da comunidade</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="principio">
+  <div class="env">
+    <p class="olho" style="color:#7DD3FC">O princípio inegociável</p>
+    <p class="aspas">
+      “Quanto mais você cuida da sua saúde,<br/>mais o Essentius cuida de você.”
+    </p>
+    <p>
+      O Essentius recompensa o <strong>cuidado</strong>, nunca o resultado clínico. A pessoa ganha
+      por ter medido — não por ter medido “bem”. Premiar resultado seria premiar quem teve um dia
+      bom e punir quem está numa fase difícil, que é exatamente quem mais precisa continuar
+      registrando. Nenhuma tela deste produto diz “ruim”. Diz “acima do alvo”, que é fato, não
+      veredito. É por isso que a métrica-mestra do produto é <strong>aderência</strong>, e não
+      glicemia média.
+    </p>
+  </div>
+</section>
+
+<section class="listra">
+  <div class="env duas">
+    <div>
+      <p class="olho">Sem atrito</p>
+      <h2 class="titulo">Uma foto resolve a refeição</h2>
+      <p class="sub">
+        Registrar comida é a tarefa que mais faz gente abandonar aplicativo de diabetes.
+        No Essentius a pessoa fotografa o prato: o agente identifica os alimentos, estima os
+        carboidratos e mostra o grau de confiança da estimativa — para ela decidir se aceita,
+        ajusta ou corrige.
+      </p>
+    </div>
+    <img src="/assets/img1.jpg" width="512" height="512" loading="lazy"
+         alt="Prato de salada analisado pelo Essentius, com estimativa de carboidratos sobreposta"/>
+  </div>
+</section>
+
+<section>
+  <div class="env duas">
+    <img src="/assets/img3.jpg" width="512" height="512" loading="lazy"
+         alt="Resultado de exame laboratorial sendo lido e explicado pelo Essentius"/>
+    <div>
+      <p class="olho">O dado já existe</p>
+      <h2 class="titulo">O exame não devia ser um PDF que ninguém explica</h2>
+      <p class="sub">
+        Sensor de glicemia gera centenas de leituras por semana. Exame de sangue vira um arquivo
+        cheio de siglas. O trabalho do Essentius não é pedir que a pessoa digite tudo de novo — é
+        ler o que já existe, cruzar com o histórico e transformar em conversa. E o mesmo material,
+        organizado, vai com ela para a consulta.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="listra" id="tecnologia">
+  <div class="env">
+    <p class="olho">Engenharia</p>
+    <h2 class="titulo">Construído como plataforma de escala, desde a primeira linha</h2>
+    <p class="sub">
+      Software de saúde não se improvisa. A base do Essentius está em produção com a disciplina
+      de quem sustenta sistema crítico há duas décadas: infraestrutura própria, dado de saúde
+      modelado corretamente e regra clínica dentro do código.
+    </p>
+
+    <div class="lista-prova">
+      <div class="prova"><span class="check" aria-hidden="true">✓</span><div>
+        <b>API em produção</b>
+        <span>Java 21 e Spring Boot em servidor próprio, HTTPS com renovação automática de certificado e backup diário.</span>
+      </div></div>
+      <div class="prova"><span class="check" aria-hidden="true">✓</span><div>
+        <b>Aplicativo móvel</b>
+        <span>Flutter — uma base de código para Android e iOS — com sessão no cofre criptografado do aparelho e renovação transparente de token.</span>
+      </div></div>
+      <div class="prova"><span class="check" aria-hidden="true">✓</span><div>
+        <b>Série temporal desde o primeiro dia</b>
+        <span>PostgreSQL com TimescaleDB: glicemia é dado de série temporal e foi modelado como tal — a base aguenta CGM sem redesenho.</span>
+      </div></div>
+      <div class="prova"><span class="check" aria-hidden="true">✓</span><div>
+        <b>Guardrails clínicos no código</b>
+        <span>Sinal de emergência tem resposta imediata que independe do modelo de IA. Prescrição é bloqueada por regra, não por instrução de prompt.</span>
+      </div></div>
+      <div class="prova"><span class="check" aria-hidden="true">✓</span><div>
+        <b>LGPD com trilha auditável</b>
+        <span>Consentimento versionado, evidência preservada e revogação tão simples quanto consentir, como manda o art. 8º.</span>
+      </div></div>
+      <div class="prova"><span class="check" aria-hidden="true">✓</span><div>
+        <b>Verificação automatizada</b>
+        <span>Bateria de checagens roda contra o ambiente de produção a cada mudança, incluindo isolamento de dados entre usuários.</span>
+      </div></div>
+      <div class="prova"><span class="check" aria-hidden="true">✓</span><div>
+        <b>Economia auditável</b>
+        <span>EssCoins em livro-razão de dupla entrada, append-only: todo crédito e todo resgate são rastreáveis, sem edição de histórico.</span>
+      </div></div>
+      <div class="prova"><span class="check" aria-hidden="true">✓</span><div>
+        <b>Custo de IA sob controle</b>
+        <span>Roteamento de modelo, cache e cotas invisíveis para uso normal — o que torna o lançamento gratuito sustentável.</span>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="mercado">
+  <div class="env">
+    <p class="olho">Mercado e modelo</p>
+    <h2 class="titulo">Um problema caro, crônico e mal atendido</h2>
+    <p class="sub">
+      Diabetes não tem alta. É uma condição que exige decisão várias vezes ao dia, todos os dias,
+      pelo resto da vida — e a maior parte dessas decisões acontece longe do consultório, sem
+      nenhum apoio. É por isso que a retenção neste mercado vale mais do que a aquisição.
+    </p>
+
+    <div class="grade-3">
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">📈</div>
+        <h3>Tamanho do mercado</h3>
+        <p>
+          16,6 milhões de adultos com diabetes no Brasil. A uma assinatura de R$ 9,90/mês, o
+          mercado endereçável só de assinatura no país passa de <strong>R$ 1,9 bilhão por
+          ano</strong> — antes de qualquer receita de ecossistema.
+          <em style="color:var(--apagado);font-size:.88em;display:block;margin-top:6px">
+            Cálculo ilustrativo sobre a base do IDF Diabetes Atlas 2025.</em>
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">💳</div>
+        <h3>Assinatura de baixo atrito</h3>
+        <p>
+          Lançamento gratuito para formar base e aprender com uso real. Depois, preço de cafezinho:
+          a tese é volume, não margem por usuário. Fundadores mantêm a condição vitalícia — a
+          cobrança futura vira privilégio dos primeiros, não traição.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">🏪</div>
+        <h3>Receita de ecossistema</h3>
+        <p>
+          A linha que cresce até dominar: farmácias, laboratórios, clínicas e profissionais pagam
+          pelo cliente qualificado que chega pela plataforma. Canal de aquisição para eles,
+          benefício real para o usuário, receita recorrente que não depende de espremer a pessoa.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">🏢</div>
+        <h3>B2B2C</h3>
+        <p>
+          Operadoras e empregadores pagam por engajamento das suas populações, comprovado com dado
+          agregado e anônimo de aderência. Diabetes mal controlado é uma das maiores linhas de
+          sinistro do setor — e aderência é exatamente o que a plataforma move.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">🔒</div>
+        <h3>A linha vermelha</h3>
+        <p>
+          Dado de saúde individual <strong>jamais</strong> é produto. O que se oferece ao parceiro
+          é acesso ao canal e prova agregada de engajamento. Recusar isso é política, não
+          negociação — e é o que torna a marca defensável no longo prazo.
+        </p>
+      </article>
+      <article class="cartao">
+        <div class="icone" aria-hidden="true">🏰</div>
+        <h3>O ativo que se acumula</h3>
+        <p>
+          Cada registro melhora o contexto que o agente recebe. Cada nível do Essi é história que
+          a pessoa construiu. Cada parceiro conectado aumenta o valor para o próximo usuário — e
+          para o próximo parceiro. É efeito de rede em cima de hábito diário.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="listra" id="execucao">
+  <div class="env">
+    <p class="olho">Execução</p>
+    <h2 class="titulo">De onde partimos, e para onde isso vai</h2>
+    <p class="sub">
+      A plataforma já existe e roda. O capital acelera distribuição, time e a construção da rede
+      de parceiros — não a construção do produto do zero.
+    </p>
+
+    <div class="trilha">
+      <div class="fase viva">
+        <span class="tag tag-ok"><span class="ponto"></span> No ar</span>
+        <b>A plataforma</b>
+        <p>
+          API em produção com autenticação, registro de saúde, economia de EssCoins, chat com o
+          agente de IA e consentimento LGPD auditável. Aplicativo móvel compilado e site publicado.
+        </p>
+      </div>
+      <div class="fase">
+        <span class="tag tag-agora">Em curso</span>
+        <b>Lojas e primeiros Fundadores</b>
+        <p>
+          Publicação na Play Store e App Store, o Essi ganhando corpo e animação, e a abertura da
+          base de Fundadores — os usuários que entram no começo e ficam com condição vitalícia.
+        </p>
+      </div>
+      <div class="fase">
+        <span class="tag tag-prox">Próximo</span>
+        <b>Sensores e primeiros parceiros</b>
+        <p>
+          Integração com glicemia contínua e leitura automática de exames, e as primeiras âncoras
+          do ecossistema — farmácia e laboratório — que provam a mecânica de resgate ponta a ponta.
+        </p>
+      </div>
+      <div class="fase">
+        <span class="tag tag-prox">Expansão</span>
+        <b>Rede, comunidade e regulatório</b>
+        <p>
+          Abertura do ecossistema por região, comunidade com mentoria, portal do profissional
+          parceiro e a avaliação formal de ANVISA para as funcionalidades que exigirem
+          enquadramento como dispositivo médico.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="investidores">
+  <div class="env duas">
+    <div>
+      <p class="olho">Para investidores</p>
+      <h2 class="titulo">Construído por quem entrega software crítico há duas décadas</h2>
+      <p class="sub">
+        O Essentius é uma iniciativa da <strong>Agile Solution</strong>, que desenvolve e opera
+        sistemas de missão crítica para a indústria brasileira — ERP, integrações industriais,
+        automação e plataformas SaaS em produção, com clientes que dependem desses sistemas para
+        faturar todos os dias.
+      </p>
+      <p class="sub" style="margin-top:16px">
+        A tese não é um aplicativo. É a camada de dado e de rotina do paciente crônico brasileiro —
+        e o ecossistema de saúde que se conecta a ela. Quem ocupa esse lugar primeiro fica com
+        o hábito diário, o histórico e o relacionamento com os dois lados do mercado.
+      </p>
+      <p style="margin-top:30px">
+        <a class="btn btn-primario" href="mailto:suporte@agilesolution.com.br?subject=Essentius%20-%20conversa%20com%20investidor">Falar com o fundador</a>
+      </p>
+    </div>
+
+    <div class="painel">
+      <h3>A tese em quatro linhas</h3>
+      <div class="linha-tese">
+        <b>Problema</b>
+        <span>16,6 milhões de brasileiros gerenciam uma condição crônica sozinhos, entre uma consulta e outra, com uma rede de cuidado fragmentada.</span>
+      </div>
+      <div class="linha-tese">
+        <b>Produto</b>
+        <span>O companheiro diário: registro sem atrito, agente de IA que explica, e gamificação que sustenta o hábito quando a motivação falha.</span>
+      </div>
+      <div class="linha-tese">
+        <b>Ecossistema</b>
+        <span>Farmácia, laboratório, oftalmologia, podologia, nutrição e clínicas conectadas ao contexto real de cada usuário — o parceiro paga pelo cliente que chega.</span>
+      </div>
+      <div class="linha-tese">
+        <b>Defesa</b>
+        <span>Recompensa o cuidado e não o resultado; espécie proprietária como PI; guardrails clínicos no código; e efeito de rede entre usuários e parceiros.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="comecar">
+  <div class="env">
+    <h2 class="titulo" style="color:#fff">Quer ser um dos primeiros?</h2>
+    <p>
+      O Essentius entra no ar gratuito. Quem chega no começo entra como Fundador e mantém a
+      condição para sempre — com badge exclusiva no perfil e item único no mundo do Essi.
+    </p>
+    <div class="acoes">
+      <a class="btn btn-claro" href="https://www.instagram.com/essentius/" rel="noopener">Acompanhar no Instagram</a>
+      <a class="btn btn-vidro" href="mailto:suporte@agilesolution.com.br?subject=Essentius%20-%20quero%20ser%20Fundador">Avise-me no lançamento</a>
+    </div>
+    <p style="margin-top:30px;font-size:.92rem;color:#8FA0C4">
+      É farmácia, laboratório, clínica ou profissional de saúde?
+      <a href="mailto:suporte@agilesolution.com.br?subject=Essentius%20-%20quero%20ser%20parceiro" style="color:#93C5FD;font-weight:700">Fale sobre parceria →</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="env">
+    <img src="/assets/logo-horizontal.png" alt="Essentius" width="471" height="120" class="rodape-logo"/>
+    <div class="rodape">
+      <span>© 2026 Essentius — uma iniciativa da <a href="https://agilesolution.com.br/" rel="noopener">Agile Solution</a></span>
+      <nav class="rodape-links" aria-label="Páginas do site">
+        <a href="/">Para você</a>
+        <a href="/app-para-controlar-diabetes/">App para diabetes</a>
+        <a href="/perguntas-frequentes/">Dúvidas</a>
+        <a href="/politica-de-privacidade/">Privacidade</a>
+        <a href="/termos-de-uso/">Termos de Uso</a>
+        <a href="https://www.instagram.com/essentius/" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+    <p class="aviso">
+      O Essentius é uma ferramenta de apoio ao autocuidado e à organização das suas informações
+      de saúde. Não faz diagnóstico, não prescreve e não calcula doses de medicamento. Quem conduz
+      o seu tratamento é a sua equipe de saúde. Em emergência, procure atendimento ou ligue 192.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
