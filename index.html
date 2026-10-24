@@ -92,7 +92,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- display=optional, e nao swap: com swap, num 4G lento a Manrope chegava
+     depois do primeiro desenho, o titulo redesenhava mais alto e empurrava os
+     celulares do topo para fora da tela (CLS 0,088 medido). Com optional, a
+     fonte so entra se chegar a tempo; senao a visita fica na fonte do sistema
+     e nada pula. Da segunda visita em diante ela ja esta em cache. -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=optional" rel="stylesheet"/>
 
 <!-- CSS escrito a mao, sem Tailwind por CDN. O CDN compilava o CSS no navegador
      a cada visita e bloqueava a primeira renderizacao — que e exatamente o que
@@ -624,7 +629,7 @@
   .rodape a:hover{color:#fff;text-decoration:underline}
   .rodape-links{display:flex;gap:18px;flex-wrap:wrap}
   .aviso{margin-top:32px;padding-top:26px;border-top:1px solid rgba(255,255,255,.07);
-         color:#65739A;font-size:.84rem;line-height:1.68}
+         color:var(--apagado);font-size:.84rem;line-height:1.68}
 
   :focus-visible{outline:3px solid var(--ciano);outline-offset:3px;border-radius:6px}
   @media(prefers-reduced-motion:reduce){
@@ -1108,6 +1113,7 @@
   </div>
 </header>
 
+<main>
 <section class="listra publicos-sec" id="publicos">
   <div class="env">
     <div class="publicos">
@@ -1553,6 +1559,7 @@
     </p>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="env">
