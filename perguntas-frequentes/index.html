@@ -21,7 +21,6 @@
 <meta property="og:image" content="https://essentius.com.br/assets/og-essentius.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 
-<script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -81,6 +80,10 @@
   ]
 }
 </script>
+<!-- CSS do Tailwind compilado uma vez (assets/paginas.css, 8,5 KB) em vez do
+     script do CDN (~400 KB), que montava o CSS no navegador a cada visita.
+     Fica no fim do head, onde o CDN injetava o dele: mesma precedencia. -->
+<link rel="stylesheet" href="/assets/paginas.css"/>
 </head>
 <body class="overflow-x-hidden">
 
